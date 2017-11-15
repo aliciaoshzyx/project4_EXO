@@ -5,6 +5,10 @@ For this project I intend to make some interactive information page pieces that 
 
 ## Sketches
 
+![Alt text](https://github.com/aliciaoshzyx/project4_EXO/blob/master/media/navSketch.jpg)
+![Alt text](https://github.com/aliciaoshzyx/project4_EXO/blob/master/media/profileSketch.jpg)
+![Alt text](https://github.com/aliciaoshzyx/project4_EXO/blob/master/media/discSketch.jpg)
+![Alt text](https://github.com/aliciaoshzyx/project4_EXO/blob/master/media/infoSketch.jpg)
 
 ## What I need to learn and Resources
 
