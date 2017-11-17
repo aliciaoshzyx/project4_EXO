@@ -13,5 +13,3 @@ For this project I intend to make some interactive information page pieces that 
 ## What I need to learn and Resources
 
 For this project I will need to learn how to use one or more JS libraries to do interesting animations and manipulat SVGs. I plan to use a JavaScript library for animations that was not learned in class in order to do the animations and SVG manipulation ( likely Anime.js or Bonsai). If my initial choice of JS library doesn't work this may change to a library for animations and a library for SVG manipulation. In order to find fitting libraries I will use resources provided, Google, or ask my professor for ideas. I will also look into the JQueryUI library more for things with the dragging and dropping of the record. 
-
-## Repository link
