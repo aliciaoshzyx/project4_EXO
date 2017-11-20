@@ -1,0 +1,22 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+svg{
+    width: 90%;
+    height:90%;
+}
+
+#logo{
+    margin-left: 5%;
+}
+
+#E, #X, #O{
+    fill:#bcbcbc;
+}
+
+
+#eNav, #xNav, #oNav{
+    display: none;
+}
