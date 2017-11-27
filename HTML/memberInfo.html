@@ -6,83 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Member Info</title>
-    <script href="JS/anime.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JS/anime.min.js"></script>
     <link rel="stylesheet" href="../CSS/memberInfo.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <script>
+        window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
+    </script>
+ 
 </head>
+
 
 <body>
         <div id=navLinks>
             <h2><a href="navigation.html">Home</a></h2>
         </div>
         <div id="themeChanger">
-            <img src="../media/albums/exoMAMA.jpg" alt="mamaAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoXOXO.jpg" alt="XOXOAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoGrowl.jpg" alt="growlAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoMiracles.jpg" alt="miraclesInDecemberAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoOverdose.jpg" alt="overdoseAlbumCover" class ="themeImage selected">
-            <img src="../media/albums/exoEXODUS.jpg" alt="EXODUSAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoLMR.jpg" alt="loveMeRightAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoLMRRU.jpg" alt="loveMeRightRomanticUniverseAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoSingForYou.jpg" alt="singForYouAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoEXACT.jpg" alt="EXACTAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoLotto.jpg" alt="lottoAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoComingOver.jpg" alt="comingOverAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoForLife.jpg" alt="forLifeAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoTheWar.jpg" alt="theWarAlbumCover" class ="themeImage">
-            <img src="../media/albums/exoPower.jpg" alt="powerAlbumCover" class ="themeImage">
+            <div id="mamaAlbum"><img src="../media/albums/exoMAMA.jpg" alt="mamaAlbumCover" class="themeImage"></div>
+            <div id="xoxoAlbum"><img src="../media/albums/exoXOXO.jpg" alt="XOXOAlbumCover" class ="themeImage"></div>
+            <div id="growlAlbum"><img src="../media/albums/exoGrowl.jpg" alt="growlAlbumCover" class ="themeImage"></div>
+            <div id="midAlbum"><img src="../media/albums/exoMiracles.jpg" alt="miraclesInDecemberAlbumCover" class ="themeImage"></div>
+            <div id="overdoseAlbum"><img src="../media/albums/exoOverdose.jpg" alt="overdoseAlbumCover" class ="themeImage"></div>
+            <div id="exodusAlbum"><img src="../media/albums/exoEXODUS.jpg" alt="EXODUSAlbumCover" class ="themeImage"></div>
+            <div id="lmrAlbum"><img src="../media/albums/exoLMR.jpg" alt="loveMeRightAlbumCover" class ="themeImage"></div>
+            <div id="lmrruAlbum"><img src="../media/albums/exoLMRRU.jpg" alt="loveMeRightRomanticUniverseAlbumCover" class ="themeImage"></div>
+            <div id="sfyAlbum"><img src="../media/albums/exoSingForYou.jpg" alt="singForYouAlbumCover" class ="themeImage"></div>
+            <div id="exactAlbum"><img src="../media/albums/exoEXACT.jpg" alt="EXACTAlbumCover" class ="themeImage"></div>
+            <div id="lottoAlbum"><img src="../media/albums/exoLotto.jpg" alt="lottoAlbumCover" class ="themeImage"></div>
+            <div id="coAlbum"><img src="../media/albums/exoComingOver.jpg" alt="comingOverAlbumCover" class ="themeImage"></div>
+            <div id="flAlbum"><img src="../media/albums/exoForLife.jpg" alt="forLifeAlbumCover" class ="themeImage"></div>
+            <div id="thewarAlbum"><img src="../media/albums/exoTheWar.jpg" alt="theWarAlbumCover" class ="themeImage"></div>
+            <div id="powerAlbum"><img src="../media/albums/exoPower.jpg" alt="powerAlbumCover" class ="themeImage"></div>
 
             
         </div>
-        <h3 class="center">Current Theme: Overdose</h3>
+        <h3 id="themeName" class="center">Current Theme: Overdose</h3>
         <div id ="content">
             <div id="row1">
                 <div id="sehun" class="member">
                     <div id="collapse" id="collapse">
-                        <div class="collapseImg">
-                            <img src="../media/sehun/sehunO.jpg" alt="sehunPowerTeaserImage" class="colI">
+                        <div id="collapseImg" class="collapseImg colI">
+                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
                         </div>
                         <div>
                             <h2 class="center">SEHUN</h2>
                         </div>
                     </div>
-                    <div id="expand" id="expand">
-                        <div id="image" class = "image">
+                    <div id="expand">
+                        <div id="image" class = "image expandImg">
+                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
                         </div>
                         <div id="info" class ="infoSection">
                             <h1>OH SEHUN</h1>
-                            <h4>(SEHUN)</h4>
                             <div class="iconInfo">
                                 <div class="row">
-                                    <div>
+                                    <div id="birthday">
                                         <h4>BIRTHDAY</h4>
-                                        <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                        <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
                                     </div>
-                                    <div>
+                                    <div id="position">
                                         <h4>POSITION</h4>
                                         <i class="fa fa-male" aria-hidden="true"></i>
                                     </div>
-                                    <div>
+                                    <div id="height">
                                         <h4>HEIGHT</h4>
                                         <i class="fa fa-arrows-v" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div>
+                                    <div id="power">
                                         <h4>POWER</h4>
                                         <i class="fa fa-power-off" aria-hidden="true"></i>
                                     </div>
-                                    <div>
+                                    <div id="nationality">
                                         <h4>NATIONALITY</h4>
                                         <i class="fa fa-flag" aria-hidden="true"></i>
                                     </div>
-                                    <div>
+                                    <div id="unit">
                                         <h4>UNIT</h4>
                                         <i class="fa fa-users" aria-hidden="true"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="sehunDisplayBox" class="displayBox">
                             </div>
                         </div>
                     </div>
@@ -94,6 +103,352 @@
         </div>
         </div>   
     <script>
+
+        window.onload=function(){
+           $("#expand").hide();
+        };
+
+        //expand and collapse the information
+        $("#collapse").click(function(){
+            if($("#expand").is(":visible"))
+            {
+                $("#expand").hide();
+            }
+            else{
+            $("#expand").show();
+            }
+        });
+
+        //birthday click
+        $("#sehun #birthday").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #birthday h4").addClass("infoClick");
+            $("#sehun #birthday i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>April 12, 1994</p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #birthday").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #birthday h4").addClass("infoClick");
+            $("#sehun #birthday i").addClass('infoClick');
+        });
+
+        $("#sehun #birthday").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+
+        //position click
+        $("#sehun #position").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #position h4").addClass("infoClick");
+            $("#sehun #position i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>Main Dancer, Rapper</p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #position").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #position h4").addClass("infoClick");
+            $("#sehun #position i").addClass('infoClick');
+        });
+
+        $("#sehun #position").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+
+        //height click
+        $("#sehun #height").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #height h4").addClass("infoClick");
+            $("#sehun #height i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>183cm (6'0) </p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #height").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #height h4").addClass("infoClick");
+            $("#sehun #height i").addClass('infoClick');
+        });
+
+        $("#sehun height").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+
+        //power click
+        $("#sehun #power").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #power h4").addClass("infoClick");
+            $("#sehun #power i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>Wind</p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #power").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #power h4").addClass("infoClick");
+            $("#sehun #power i").addClass('infoClick');
+        });
+
+        $("#sehun #power").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+        //nationality click
+        $("#sehun #nationality").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #nationality h4").addClass("infoClick");
+            $("#sehun #nationality i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>South Korean</p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #nationality").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #nationality h4").addClass("infoClick");
+            $("#sehun #nationality i").addClass('infoClick');
+        });
+
+        $("#sehun #nationality").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+        //unit click
+        $("#sehun #unit").click(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #unit h4").addClass("infoClick");
+            $("#sehun #unit i").addClass('infoClick');
+            document.getElementById("sehunDisplayBox").innerHTML = "<p>EXO-K</p>";
+            var changeC = anime({
+                targets: "#sehunDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#sehun #unit").mouseenter(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+            $("#sehun #unit h4").addClass("infoClick");
+            $("#sehun #unit i").addClass('infoClick');
+        });
+
+        $("#sehun #unit").mouseleave(function(){
+            $("#sehun i").removeClass("infoClick");
+            $("#sehun h4").removeClass("infoClick");
+        });
+        //theme changing sehun
+        var images = document.querySelectorAll(".member img");
+
+        $("#mamaAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunMama.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunMAMATeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunMama.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunMAMATeaserImage");
+            //$("img").removeClass("currentTheme");
+            //$("#mamaAlbum img").addClass("currentTheme");
+            document.getElementById("themeName").innerHTML = "Current Theme: MAMA";
+        });
+        
+
+        $("#xoxoAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunXOXO.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunXOXOTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunXOXO.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunXOXOTeaserImage");
+            //$("img").removeClass("currentTheme");
+            //$("#xoxoAlbum").addClass("currentTheme");
+            document.getElementById("themeName").innerHTML = "Current Theme: XOXO";
+        });
+        $("#growlAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunG.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunGrowlTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunG.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunGrwolTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Growl";
+        });
+        $("#midAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunMID.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunMiraclesInDecemberTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunMID.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunMiraclesInDecemberTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Miracles in December";
+        });
+        $("#overdoseAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunO.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunOverdoseTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunO.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunOverdoseTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Overdose";
+        });
+        $("#exodusAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunE.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunExodusTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunE.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunExodusTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: EXODUS";
+        });
+        $("#lmrAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLMR.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunLoveMeRightTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunLMR.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunLoveMeRightTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right";
+        });
+        $("#lmrruAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLMRRU.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunLoveMeRightRomanticUniverseTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunLMRRU.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunLoveMeRightRomanticUniverseTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right: Romantic Universe";
+        });
+        $("#sfyAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunSFY.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunSingForYouTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunSFY.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunSingForYouTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Sing For You";
+        });
+        $("#exactAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLO.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunEXACTTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunLO.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunLuckyOneTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: EX'ACT";
+        });
+        $("#lottoAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunL.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunLottoTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunL.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunLottoTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: LOTTO";
+        });
+        $("#coAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunCO.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunComingOverTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunCO.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunComingOverTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Coming Over";
+        });
+        $("#flAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunFL.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunForLifeTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunFL.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunForLifeTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: For Life";
+        });
+        $("#thewarAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunTW.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunTheWarTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunTW.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunTheWarTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: The War";
+        });
+        $("#powerAlbum").click(function(){
+            $("img").remove(".themeImg");
+            $("#sehun #collapseImg").append("<img src='../media/sehun/sehunP.jpg'>");
+            $("#sehun #collapseImg img").addClass("themeImg");
+            $("#sehun #collapseImg img").attr('alt', "sehunPowerTeaserImage");
+            $("#sehun #image").append("<img src='../media/sehun/sehunP.jpg'>");
+            $("#sehun #image img").addClass("themeImg");
+            $("#sehun #image img").attr('alt', "sehunPowerTeaserImage");
+            document.getElementById("themeName").innerHTML = "Current Theme: Power";
+        });
 
     </script>
 </body>
