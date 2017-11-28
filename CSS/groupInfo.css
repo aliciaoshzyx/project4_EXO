@@ -10,5 +10,92 @@ a {
     text-decoration:none;
 }
 
-svg{
+.trophy{
+    width:170px;
+    height:170px;
+}
+
+#shelf1trophies{
+    display:flex;
+}
+
+#shelf1{
+    display:flex;
+}
+
+#header{
+    text-align:center;
+}
+
+.center{
+    text-align:center;
+}
+
+ul{
+    list-style:none;
+}
+
+.shelfTop{
+    width:80%;
+    margin-left:10%;
+    padding-bottom:0px;
+}
+
+.shelf{
+    width:80%;
+    height:65px;
+    margin-left:10%;
+}
+
+.shelf div{
+    width:172px;
+    background:#502709;
+    text-align:center;
+}
+
+#instructions{
+    padding-top:1em;
+    margin-bottom:1em;
+    opacity:0.75;
+}
+#information{
+    width:80%;
+    margin-left:10%;
+    height: 500px;
+    display:flex;
+    margin-top:2em;
+    font-size: 1.2em;
+}
+
+#information #right{
+    height: 500px;
+    width:300px;
+}
+
+#show, #songAlbum{
+    margin-top:4em;
+}
+
+#winNum, #date{
+    margin-top:3em;
+}
+
+#information #left{
+    height: 500px;
+    width:300px;
+}
+
+#information #middle{
+    width: 400px;
+
+}
+
+#middle img{
+    margin-top:1em;
+    width:400px;
+}
+
+.transparent{
+    opacity: 0;
+    filter: alpha(0);
 }
