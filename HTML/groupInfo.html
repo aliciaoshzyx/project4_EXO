@@ -52,18 +52,19 @@
   </div>
   <h3 id="instructions" class="center">Click a trophy to show more information</br>Click its spot again to put it back</h3>
   <div id="information">
+      <div id="left" class="center">
+          <h3 id="show" class="transparent">Click a trophy</h3>
+          <h3 id="date" class="transparent">to show more info</h3>
+      </div>
     
+    <div id="middle" >
+      <img src ="../media/exoLogoSVG.svg" alt="exoLogo" class="logo">
+    </div>
     <div id="right" class="center">
         <h3 id="songAlbum" class="transparent">Click a trophy</h3>
         <h3 id="winNum" class="transparent">to show more info</h3>
     </div>
-    <div id="middle" >
-      <img src ="../media/exoLogoSVG.svg" alt="exoLogo" class="logo">
-    </div>
-    <div id="left" class="center">
-        <h3 id="show" class="transparent">Click a trophy</h3>
-        <h3 id="date" class="transparent">to show more info</h3>
-    </div>
+    
   </div>
 
   <script>
@@ -130,8 +131,8 @@
 
       var moveT1 = anime({
         targets:"#t1 img",
-        translateX: 330,
-        translateY: 450,
+        translateX: 450,
+        translateY: 500,
         durration: 300,
         scale:2,
         autoplay:false,
@@ -139,8 +140,8 @@
 
       var moveT2 = anime({
         targets:"#t2 img",
-        translateX: 170,
-        translateY: 450,
+        translateX: 230,
+        translateY: 500,
         durration: 300,
         scale:2,
         autoplay:false,
@@ -148,7 +149,8 @@
 
       var moveT3 = anime({
         targets:"#t3 img",
-        translateY: 450,
+        translateX:'5',
+        translateY: 500,
         durration: 300,
         scale:2,
         autoplay:false,
@@ -156,8 +158,8 @@
 
       var moveT4 = anime({
         targets:"#t4 img",
-        translateX: '-170',
-        translateY: 450,
+        translateX: '-220',
+        translateY: 500,
         durration: 300,
         scale:2,
         autoplay:false,
@@ -165,8 +167,8 @@
 
       var moveT5 = anime({
         targets:"#t5 img",
-        translateX: '-340',
-        translateY: 450,
+        translateX: '-440',
+        translateY: 500,
         durration: 300,
         scale:2,
         autoplay:false,
