@@ -60,32 +60,32 @@
                             <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
                         </div>
                         <div id="info" class ="infoSection">
-                            <h1>OH SEHUN</h1>
+                            <h1 id="name">OH SEHUN</h1>
                             <div class="iconInfo">
                                 <div class="row">
-                                    <div id="birthday">
+                                    <div id="birthday" class="icon">
                                         <h4>BIRTHDAY</h4>
                                         <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
                                     </div>
-                                    <div id="position">
+                                    <div id="position" class="icon">
                                         <h4>POSITION</h4>
                                         <i class="fa fa-male" aria-hidden="true"></i>
                                     </div>
-                                    <div id="height">
+                                    <div id="height" class="icon">
                                         <h4>HEIGHT</h4>
                                         <i class="fa fa-arrows-v" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div id="power">
+                                    <div id="power" class="icon">
                                         <h4>POWER</h4>
                                         <i class="fa fa-power-off" aria-hidden="true"></i>
                                     </div>
-                                    <div id="nationality">
+                                    <div id="nationality" class="icon">
                                         <h4>NATIONALITY</h4>
                                         <i class="fa fa-flag" aria-hidden="true"></i>
                                     </div>
-                                    <div id="unit">
+                                    <div id="unit" class="icon">
                                         <h4>UNIT</h4>
                                         <i class="fa fa-users" aria-hidden="true"></i>
                                     </div>
@@ -96,7 +96,55 @@
                         </div>
                     </div>
                 </div>
-                <div id="kai">
+                <div id="kai" class="member">
+                    <div id="collapse" id="collapse">
+                        <div id="collapseImg" class="collapseImg colI">
+                            <img src="../media/kai/kaiO.jpg" alt="kaiOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div>
+                            <h2 class="center">KAI</h2>
+                        </div>
+                    </div>
+                    <div id="expand">
+                        <div id="image" class = "image expandImg">
+                            <img src="../media/kai/kaiO.jpg" alt="sehunKaiTeaserImage" class="themeImg">
+                        </div>
+                        <div id="info" class ="infoSection">
+                            <h1 id="name">KIM JONGIN</h1>
+                            <div class="iconInfo">
+                                <div class="row">
+                                    <div id="birthday" class="icon">
+                                        <h4>BIRTHDAY</h4>
+                                        <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="position" class="icon">
+                                        <h4>POSITION</h4>
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="height" class="icon">
+                                        <h4>HEIGHT</h4>
+                                        <i class="fa fa-arrows-v" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="power" class="icon">
+                                        <h4>POWER</h4>
+                                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="nationality" class="icon">
+                                        <h4>NATIONALITY</h4>
+                                        <i class="fa fa-flag" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="unit" class="icon">
+                                        <h4>UNIT</h4>
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="kaiDisplayBox" class="displayBox">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id=""> 
                 </div>   
@@ -106,16 +154,29 @@
 
         window.onload=function(){
            $("#expand").hide();
+           $("#kai #expand").hide();
         };
 
-        //expand and collapse the information
-        $("#collapse").click(function(){
-            if($("#expand").is(":visible"))
+
+        //expand and collapse sehun information
+        $("#sehun #collapse").click(function(){
+            if($("#sehun #expand").is(":visible"))
             {
-                $("#expand").hide();
+                $("#sehun #expand").hide();
             }
             else{
-            $("#expand").show();
+            $("#sehun #expand").show();
+            }
+        });
+
+        //expand and collapse kai information
+        $("#kai #collapse").click(function(){
+            if($("#kai #expand").is(":visible"))
+            {
+                $("#kai #expand").hide();
+            }
+            else{
+            $("#kai #expand").show();
             }
         });
 
@@ -292,16 +353,162 @@
             $("#sehun #unit h4").addClass("infoClick");
             $("#sehun #unit i").addClass('infoClick');
         });
-        /*
-        $("#sehun #unit").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
+      
+        /******************
+        KAI EXPAND
+        ******************/
+
+        //birthday click
+        $("#kai #birthday").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #birthday h4").addClass("infoClick");
+            $("#kai #birthday i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>January 14, 1994</p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
         });
-        */
+
+        $("#kai #birthday").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #birthday h4").addClass("infoClick");
+            $("#kai #birthday i").addClass('infoClick');
+        });
+
+        
+        //position click
+        $("#kai #position").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #position h4").addClass("infoClick");
+            $("#kai #position i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>Main Dancer</p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#kai #position").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #position h4").addClass("infoClick");
+            $("#kai #position i").addClass('infoClick');
+        });
+
+        //height click
+        $("#kai #height").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #height h4").addClass("infoClick");
+            $("#kai #height i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>183cm (6'0) </p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#kai #height").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #height h4").addClass("infoClick");
+            $("#kai #height i").addClass('infoClick');
+        });
+
+        //power click
+        $("#kai #power").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #power h4").addClass("infoClick");
+            $("#kai #power i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>Teleportation</p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#kai #power").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #power h4").addClass("infoClick");
+            $("#kai #power i").addClass('infoClick');
+        });
+        
+        //nationality click
+        $("#kai #nationality").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #nationality h4").addClass("infoClick");
+            $("#kai #nationality i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>South Korean</p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#kai #nationality").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #nationality h4").addClass("infoClick");
+            $("#kai #nationality i").addClass('infoClick');
+        });
+        
+
+        //unit click
+        $("#kai #unit").click(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #unit h4").addClass("infoClick");
+            $("#kai #unit i").addClass('infoClick');
+            document.getElementById("kaiDisplayBox").innerHTML = "<p>EXO-K</p>";
+            var changeC = anime({
+                targets: "#kaiDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#kai #unit").mouseenter(function(){
+            $("#kai i").removeClass("infoClick");
+            $("#kai h4").removeClass("infoClick");
+            $("#kai #unit h4").addClass("infoClick");
+            $("#kai #unit i").addClass('infoClick');
+        });
+        
         //theme changing sehun
         var images = document.querySelectorAll(".member img");
 
         $("#mamaAlbum").click(function(){
+            //sehun
             $("img").remove(".themeImg");
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunMama.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
@@ -309,6 +516,13 @@
             $("#sehun #image").append("<img src='../media/sehun/sehunMama.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunMAMATeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiMama.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiMAMATeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiMama.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiMAMATeaserImage");
             $("img").removeClass("currentTheme");
             $("#mamaAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: MAMA";
@@ -317,168 +531,292 @@
 
         $("#xoxoAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunXOXO.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunXOXOTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunXOXO.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunXOXOTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiXOXO.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiXOXOTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiXOXO.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiXOXOTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#xoxoAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: XOXO";
         });
         $("#growlAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunG.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunGrowlTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunG.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunGrwolTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiG.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiGrowlTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiG.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiGrwolTeaserImage");
             $("img").removeClass("currentTheme");
             $("growlAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Growl";
         });
         $("#midAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunMID.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunMiraclesInDecemberTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunMID.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunMiraclesInDecemberTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiMID.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiMiraclesInDecemberTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiMID.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiMiraclesInDecemberTeaserImage");
             $("img").removeClass("currentTheme");
             $("#midAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Miracles in December";
         });
         $("#overdoseAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunO.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunOverdoseTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunO.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunOverdoseTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiO.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiOverdoseTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiO.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiOverdoseTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#overdoseAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Overdose";
         });
         $("#exodusAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunE.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunExodusTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunE.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunExodusTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiE.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiExodusTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiE.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiExodusTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#exodusAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: EXODUS";
         });
         $("#lmrAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLMR.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunLoveMeRightTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunLMR.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunLoveMeRightTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiLMR.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiLoveMeRightTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiLMR.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiLoveMeRightTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#lmrAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right";
         });
         $("#lmrruAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLMRRU.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunLoveMeRightRomanticUniverseTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunLMRRU.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunLoveMeRightRomanticUniverseTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiLMRRU.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiLoveMeRightRomanticUniverseTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiLMRRU.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiLoveMeRightRomanticUniverseTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#lmrruAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right: Romantic Universe";
         });
         $("#sfyAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunSFY.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunSingForYouTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunSFY.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunSingForYouTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiSFY.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiSingForYouTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiSFY.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiSingForYouTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#sfyAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Sing For You";
         });
         $("#exactAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunLO.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunEXACTTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunLO.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunLuckyOneTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiLO.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiEXACTTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiLO.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiLuckyOneTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#exactAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: EX'ACT";
         });
         $("#lottoAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunL.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunLottoTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunL.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunLottoTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiL.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiLottoTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiL.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiLottoTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#lottoAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: LOTTO";
         });
         $("#coAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunCO.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunComingOverTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunCO.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunComingOverTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiCO.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiComingOverTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiCO.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiComingOverTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#coAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Coming Over";
         });
         $("#flAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunFL.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunForLifeTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunFL.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunForLifeTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiFL.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiForLifeTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiFL.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiForLifeTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#flAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: For Life";
         });
         $("#thewarAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunTW.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunTheWarTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunTW.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunTheWarTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiTW.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiTheWarTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiTW.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiTheWarTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#thewarAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: The War";
         });
         $("#powerAlbum").click(function(){
             $("img").remove(".themeImg");
+            //sehun
             $("#sehun #collapseImg").append("<img src='../media/sehun/sehunP.jpg'>");
             $("#sehun #collapseImg img").addClass("themeImg");
             $("#sehun #collapseImg img").attr('alt', "sehunPowerTeaserImage");
             $("#sehun #image").append("<img src='../media/sehun/sehunP.jpg'>");
             $("#sehun #image img").addClass("themeImg");
             $("#sehun #image img").attr('alt', "sehunPowerTeaserImage");
+            //kai
+            $("#kai #collapseImg").append("<img src='../media/kai/kaiP.jpg'>");
+            $("#kai #collapseImg img").addClass("themeImg");
+            $("#kai #collapseImg img").attr('alt', "kaiPowerTeaserImage");
+            $("#kai #image").append("<img src='../media/kai/kaiP.jpg'>");
+            $("#kai #image img").addClass("themeImg");
+            $("#kai #image img").attr('alt', "kaiPowerTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#powerAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Power";
