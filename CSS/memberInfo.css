@@ -103,9 +103,14 @@ i{
     
 }
 
+#row div{
+    flex: 0 0 30%;
+}
+
 #expand{
     display:flex;
     width:100%;
+    margin-bottom: 3em;
 }
 .expandImg img{
     width:100%;
@@ -118,11 +123,10 @@ i{
 }
 
 #info h1{
-    font-size:2.5em;
+    font-size:3vw;
     margin-top:3px;
     text-align: center;
 }
-
 
 .infoIcons{
     display: flex;
@@ -133,12 +137,17 @@ i{
     width:100%;
     margin-left:4%;
     text-align:center;
+    
+}
+
+#row div{
+    width:50%;
 }
 
 .icon{
-
     margin-left:4%;
     margin-right:4%;
+    font-size:1.2vw;
 }
 
 
@@ -165,5 +174,63 @@ i{
 
 h4{
     color:#7FF96C;
+}
+
+@media (max-width: 800px)
+{
+    #themeChanger{
+        width: 100%;
+        margin-left:0;
+    }
+    #row1{
+        flex-direction:column;
+    }
+
+    #themeChanger{
+        width: 100%;
+        margin-left:0;
+    }
+    #row1{
+        flex-direction:column;
+    }
+
+    #info{
+        flex: 0 0 100%;
+    }
+
+    #expand img{
+        display: none;
+    }
+
+    #info{
+        
+        text-align: center;
+    }
+
+    .iconInfo{
+        margin-left:15%;
+        
+    }
+
+    #info h1{
+        font-size:8vw;
+    }
+
+    .icon{
+        font-size:3vw;
+    }
+
+}
+
+@media (max-width: 375px)
+{
+    .iconInfo{
+        margin:2%;
+        margin-left:3%;
+    }
+
+    .icon{
+        font-size:4.5vw;
+    }
 }
 
