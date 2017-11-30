@@ -10,15 +10,13 @@ a {
     text-decoration:none;
 }
 
-.trophy{
-    width:195px;
-    height:195px;
-}
-
 #shelf1trophies{
     display:flex;
 }
 
+#shelf1trophies div{
+    width:20%;
+}
 #shelf1{
     display:flex;
 }
@@ -45,6 +43,7 @@ ul{
     width:74%;
     height:65px;
     margin-left:13%;
+    
 }
 
 .shelf div{
