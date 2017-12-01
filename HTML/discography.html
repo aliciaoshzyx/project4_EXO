@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="../CSS/memberInfo.css">
   <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+  //<script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
   <div id=content>
     <div id="music">
       <div id="exodus" class="album">
-        <img src="../media/albums/exoEXODUS.jpg">
+        <img id="exodusAlbum" src="../media/albums/exoEXODUS.jpg">
         <div class="expand">
             <div id="cmb" class="song"> 1. CALL ME BABY</div>
             <div id="t" class="song"> 2. TRANSFORMER</div>
@@ -44,6 +44,19 @@
   <script>
     $("#music").css($(window).height());
 
+    window.onload = function(){
+      $("#exodus #expand").hide();
+    }
+
+    $("#exodusAlbum").click(function(){
+      if($("#exodus #expand").is(":visible"))
+      {
+        $("#exodus #expand").hide();
+      }
+      else{
+        $("#exodus #expand").show();
+      }
+    })
   </script>
 </body>
 </html>
