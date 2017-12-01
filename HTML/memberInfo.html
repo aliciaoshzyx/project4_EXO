@@ -152,21 +152,21 @@
                         </div>
                     </div>
                 </div>
-                <div id="sehun" class="member">
+                <div id="chanyeol" class="member">
                     <div id="collapse" id="collapse">
                         <div id="collapseImg" class="collapseImg colI">
-                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
+                            <img src="../media/chanyeol/chanyeolO.jpg" alt="chanyeolOverdoseTeaserImage" class="themeImg">
                         </div>
                         <div>
-                            <h2 class="center">SEHUN</h2>
+                            <h2 class="center">CHANYEOL</h2>
                         </div>
                     </div>
                     <div id="expand">
                         <div id="image" class = "image expandImg">
-                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
+                            <img src="../media/chanyeol/chanyeolO.jpg" alt="chanyeolOverdoseTeaserImage" class="themeImg">
                         </div>
                         <div id="info" class ="infoSection">
-                            <h1 id="name">OH SEHUN</h1>
+                            <h1 id="name">PARK CHANYEOL</h1>
                             <div class="iconInfo">
                                     <div class="row">
                                             <div id="birthday" class="icon">
@@ -200,7 +200,7 @@
                                             </div>
                                         </div>
                             </div>
-                            <div id="sehunDisplayBox" class="displayBox">
+                            <div id="chanyeolDisplayBox" class="displayBox">
                             </div>
                         </div>
                     </div>
@@ -211,9 +211,11 @@
         </div>   
     <script>
 
+        //set the expanding things closed at start
         window.onload=function(){
            $("#expand").hide();
            $("#kai #expand").hide();
+           $("#chanyeol #expand").hide();
         };
 
 
@@ -239,6 +241,21 @@
             }
         });
 
+        //expand and collapse chanyeol 
+        //expand and collapse kai information
+        $("#chanyeol #collapse").click(function(){
+            if($("#chanyeol #expand").is(":visible"))
+            {
+                $("#chanyeol #expand").hide();
+            }
+            else{
+            $("#chanyeol #expand").show();
+            }
+        });
+
+        /**********************
+        SEHUN EXPAND
+        ***********************/
         //birthday click
         $("#sehun #birthday").click(function(){
             $("#sehun i").removeClass("infoClick");
@@ -263,11 +280,6 @@
             $("#sehun #birthday i").addClass('infoClick');
         });
 
-        /*$("#sehun #birthday").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
-        });
-        */
         //position click
         $("#sehun #position").click(function(){
             $("#sehun i").removeClass("infoClick");
@@ -291,13 +303,6 @@
             $("#sehun #position h4").addClass("infoClick");
             $("#sehun #position i").addClass('infoClick');
         });
-
-        /*
-        $("#sehun #position").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
-        });
-        */
 
         //height click
         $("#sehun #height").click(function(){
@@ -323,12 +328,6 @@
             $("#sehun #height i").addClass('infoClick');
         });
 
-        /*
-        $("#sehun height").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
-        });
-        */
         //power click
         $("#sehun #power").click(function(){
             $("#sehun i").removeClass("infoClick");
@@ -352,12 +351,6 @@
             $("#sehun #power h4").addClass("infoClick");
             $("#sehun #power i").addClass('infoClick');
         });
-        /*
-        $("#sehun #power").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
-        });
-        */
 
         //nationality click
         $("#sehun #nationality").click(function(){
@@ -382,12 +375,6 @@
             $("#sehun #nationality h4").addClass("infoClick");
             $("#sehun #nationality i").addClass('infoClick');
         });
-        /*
-        $("#sehun #nationality").mouseleave(function(){
-            $("#sehun i").removeClass("infoClick");
-            $("#sehun h4").removeClass("infoClick");
-        });
-        */
 
         //unit click
         $("#sehun #unit").click(function(){
@@ -562,10 +549,165 @@
             $("#kai #unit h4").addClass("infoClick");
             $("#kai #unit i").addClass('infoClick');
         });
+
+        /******************
+        CHANYEOL EXPAND
+        ******************/
+
+        //birthday click
+        $("#chanyeol #birthday").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #birthday h4").addClass("infoClick");
+            $("#chanyeol #birthday i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>November 21, 1992</p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #birthday").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #birthday h4").addClass("infoClick");
+            $("#chanyeol #birthday i").addClass('infoClick');
+        });
+
         
-        //theme changing sehun
+        //position click
+        $("#chanyeol #position").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #position h4").addClass("infoClick");
+            $("#chanyeol #position i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>Main Rapper</p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #position").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #position h4").addClass("infoClick");
+            $("#chanyeol #position i").addClass('infoClick');
+        });
+
+        //height click
+        $("#chanyeol #height").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #height h4").addClass("infoClick");
+            $("#chanyeol #height i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>188cm (6'2) </p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #height").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #height h4").addClass("infoClick");
+            $("#chanyeol #height i").addClass('infoClick');
+        });
+
+        //power click
+        $("#chanyeol #power").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #power h4").addClass("infoClick");
+            $("#chanyeol #power i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>Fire</p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #power").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #power h4").addClass("infoClick");
+            $("#chanyeol #power i").addClass('infoClick');
+        });
+        
+        //nationality click
+        $("#chanyeol #nationality").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #nationality h4").addClass("infoClick");
+            $("#chanyeol #nationality i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>South Korean</p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #nationality").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #nationality h4").addClass("infoClick");
+            $("#chanyeol #nationality i").addClass('infoClick');
+        });
+        
+
+        //unit click
+        $("#chanyeol #unit").click(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #unit h4").addClass("infoClick");
+            $("#chanyeol #unit i").addClass('infoClick');
+            document.getElementById("chanyeolDisplayBox").innerHTML = "<p>EXO-K</p>";
+            var changeC = anime({
+                targets: "#chanyeolDisplayBox p",
+                opacity:{
+                    value:1,
+                    duration: 2000,
+                    easing: 'easeInOutQuad'
+                },
+            })
+        });
+
+        $("#chanyeol #unit").mouseenter(function(){
+            $("#chanyeol i").removeClass("infoClick");
+            $("#chanyeol h4").removeClass("infoClick");
+            $("#chanyeol #unit h4").addClass("infoClick");
+            $("#chanyeol #unit i").addClass('infoClick');
+        });
+        
+        /*
+        THEME CHANGING
+        */
         var images = document.querySelectorAll(".member img");
 
+        /**********************
+        MAMA
+        ***********************/
         $("#mamaAlbum").click(function(){
             //sehun
             $("img").remove(".themeImg");
@@ -582,12 +724,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiMama.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiMAMATeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolMama.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolMAMATeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolMama.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolMAMATeaserImage");
+            
             $("img").removeClass("currentTheme");
             $("#mamaAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: MAMA";
         });
-        
-
+        /**********************
+        XOXO
+        ***********************/
         $("#xoxoAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -604,11 +755,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiXOXO.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiXOXOTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolXOXO.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolXOXOTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolXOXO.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolXOXOTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#xoxoAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: XOXO";
         });
+        /**********************
+        GROWL
+        ***********************/
         $("#growlAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -625,10 +786,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiG.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiGrwolTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolG.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolGrowlTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolG.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolGrwolTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("growlAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Growl";
         });
+        /**********************
+        MIRACLES IN DECEMBER
+        ***********************/
         $("#midAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -645,10 +817,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiMID.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiMiraclesInDecemberTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolMID.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolMiraclesInDecemberTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolMID.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolMiraclesInDecemberTeaserImage");
+
             $("img").removeClass("currentTheme");
             $("#midAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Miracles in December";
         });
+        /**********************
+        OVERDOSE
+        ***********************/
         $("#overdoseAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -665,11 +848,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiO.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiOverdoseTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolO.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolOverdoseTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolO.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolOverdoseTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#overdoseAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Overdose";
         });
+        /**********************
+        EXODUS
+        ***********************/
         $("#exodusAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -686,11 +879,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiE.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiExodusTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolE.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolExodusTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolE.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolExodusTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#exodusAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: EXODUS";
         });
+        /**********************
+        LOVE ME RIGHT
+        ***********************/
         $("#lmrAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -707,11 +910,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiLMR.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiLoveMeRightTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolLMR.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolLoveMeRightTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolLMR.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolLoveMeRightTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#lmrAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right";
         });
+        /**********************
+        LOVE ME RIGHT ROMANTIC UNIVERSE
+        ***********************/
         $("#lmrruAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -728,11 +941,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiLMRRU.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiLoveMeRightRomanticUniverseTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolLMRRU.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolLoveMeRightRomanticUniverseTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolLMRRU.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolLoveMeRightRomanticUniverseTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#lmrruAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Love Me Right: Romantic Universe";
         });
+        /**********************
+        SING FOR YOU
+        ***********************/
         $("#sfyAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -749,11 +972,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiSFY.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiSingForYouTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolSFY.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolSingForYouTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolSFY.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolSingForYouTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#sfyAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Sing For You";
         });
+        /**********************
+        EX'ACT
+        ***********************/
         $("#exactAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -770,11 +1003,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiLO.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiLuckyOneTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolLO.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolEXACTTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolLO.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolLuckyOneTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#exactAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: EX'ACT";
         });
+        /**********************
+        LOTTO
+        ***********************/
         $("#lottoAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -791,11 +1034,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiL.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiLottoTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolL.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolLottoTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolL.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolLottoTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#lottoAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: LOTTO";
         });
+        /**********************
+        COMING OVER
+        ***********************/
         $("#coAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -812,11 +1065,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiCO.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiComingOverTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolCO.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolComingOverTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolCO.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolComingOverTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#coAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: Coming Over";
         });
+        /**********************
+        FOR LIFE
+        ***********************/
         $("#flAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -833,11 +1096,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiFL.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiForLifeTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolFL.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolForLifeTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolFL.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolForLifeTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#flAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: For Life";
         });
+        /**********************
+        THE WAR
+        ***********************/
         $("#thewarAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -854,11 +1127,21 @@
             $("#kai #image").append("<img src='../media/kai/kaiTW.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiTheWarTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolTW.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolTheWarTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolTW.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolTheWarTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#thewarAlbum img").addClass("currentTheme");
             document.getElementById("themeName").innerHTML = "Current Theme: The War";
         });
+        /**********************
+        THE POWER OF MUSIC
+        ***********************/
         $("#powerAlbum").click(function(){
             $("img").remove(".themeImg");
             //sehun
@@ -875,6 +1158,13 @@
             $("#kai #image").append("<img src='../media/kai/kaiP.jpg'>");
             $("#kai #image img").addClass("themeImg");
             $("#kai #image img").attr('alt', "kaiPowerTeaserImage");
+            //chanyeol
+            $("#chanyeol #collapseImg").append("<img src='../media/chanyeol/chanyeolP.jpg'>");
+            $("#chanyeol #collapseImg img").addClass("themeImg");
+            $("#chanyeol #collapseImg img").attr('alt', "chanyeolPowerTeaserImage");
+            $("#chanyeol #image").append("<img src='../media/chanyeol/chanyeolP.jpg'>");
+            $("#chanyeol #image img").addClass("themeImg");
+            $("#chanyeol #image img").attr('alt', "chanyeolPowerTeaserImage");
 
             $("img").removeClass("currentTheme");
             $("#powerAlbum img").addClass("currentTheme");
