@@ -1,0 +1,39 @@
+*{
+    background:#1D1D1D;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+h3{
+    color:#838383;
+}
+
+#content{
+    display:flex;
+}
+
+#music{
+    display:flex;
+    overflow: scroll;
+    flex: 0 0 50%;
+}
+
+#music img{
+    width:100%;
+}
+
+.album{
+    text-align:center;
+    line-height: 4vw;
+}
+
+.song:hover{
+    opacity:0.7;
+
+}
