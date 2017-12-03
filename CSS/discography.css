@@ -10,30 +10,145 @@ a {
     text-decoration:none;
 }
 
+.center{
+    text-align:center;
+}
+
 h3{
     color:#838383;
 }
 
+#instructions{
+    margin-bottom:5%;
+    margin-left:11%;
+    margin-right:11%;
+    display:flex;
+    flex-direction:column;
+}
+.instructions{
+    color: #FCFFB7;
+    margin:0 auto;
+}
+
 #content{
     display:flex;
+    margin-left:4%;
 }
 
 #music{
-    display:flex;
-    overflow: scroll;
-    flex: 0 0 50%;
+    flex: 0 0 65%;
+    max-height: 45vw;
+    overflow-y:scroll;
 }
 
 #music img{
-    width:100%;
+    width:20vw;
+    height:37vw;
+    margin-bottom:0;
 }
 
 .album{
+    display:flex;
     text-align:center;
-    line-height: 4vw;
+    line-height: 3.8vw;
+    max-height: 38vw;
+    width:100%;
+    margin-bottom:5%;
+}
+
+.album img{
+    flex: 0 0 60%;
+}
+
+.expand{
+    flex: 0 0 40%;
 }
 
 .song:hover{
     opacity:0.7;
+}
 
+#player{
+    flex: 0 0 35%;
+    margin-left:5%;
+    margin-top:5%;
+}
+
+#cd{
+    border: 5px dashed #FFFFFF;
+    height: 153px;
+    width: 290px;
+}
+
+#record img{
+    width:150px;
+    margin-top:5px;
+    margin-left:70px;
+}
+
+#record p{
+    text-align: center;
+    padding-top:30px;
+    font-size:1.25em;
+}
+
+#play img{
+    background:none;
+}
+
+#play{
+    background: #5A5A5A;
+    background-size: 290px 290px;
+    width:290px;
+    height: 290px;
+    border: 5px solid #FFFFFF;
+}
+
+#play img{
+    width:290px;
+    height:290px;
+}
+
+@media (max-width:1080px)
+{
+    #content{
+        flex-direction:column;
+    }
+
+    #music{
+        height:500px;
+        max-height:80vw;
+        margin-bottom: 40px;
+    }
+
+    .album{
+        margin-bottom: 100px;
+    }
+
+    #exodus img, #theWar img{
+        height: 43vw;
+        max-height:100vw;
+        flex: 0 0 50%;
+    }
+
+}
+
+@media (max-width:375px){
+    
+    #music{
+        height:500px;
+        max-height:80vw;
+        margin-bottom: 20px;
+    }
+
+    #exodus, #theWar{
+        max-height:60vw;
+        font-size: 0.5em;
+    }
+
+    #exodus img, #theWar img{
+        height: 150px;
+        max-height:100vw;
+        flex: 0 0 50%;
+    }
 }

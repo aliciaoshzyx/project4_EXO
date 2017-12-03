@@ -14,15 +14,30 @@
   <link rel="stylesheet" href="../CSS/memberInfo.css">
   <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  //<script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script>
+      window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
+  </script>
 </head>
 
 <body>
+    <div id="header" class="center">
+        <h2><a href="navigation.html">Home</a></h2>
+      </div>
+      <h4 class="center">EXO's Discography</h4>
+  <div id="instructions">
+    
+    <p class="center instructions">Click an album to view its tracks</p>
+    <p class="center instructions">Click a song to make it into a cd</p>
+    <p class="center instructions">Click and drag the cd to the mp3 player to play</p>
+  </div>
   <div id=content>
     <div id="music">
+        <div><h2>EXODUS</h2></div>
       <div id="exodus" class="album">
         <img id="exodusAlbum" src="../media/albums/exoEXODUS.jpg">
-        <div class="expand">
+        <div id="expand" class="expand">
             <div id="cmb" class="song"> 1. CALL ME BABY</div>
             <div id="t" class="song"> 2. TRANSFORMER</div>
             <div id="wi" class="song"> 3. 시선들, 시선 하나 (What if...)</div>
@@ -31,23 +46,65 @@
             <div id="ed" class="song"> 6. EL DORADO</div>
             <div id="p" class="song"> 7. PLAYBOY</div>
             <div id="h" class="song"> 8. HURT</div>
-            <div id="ll" class="song"> 9.유성우[流星雨](lady Luck) </div>
+            <div id="ll" class="song"> 9.유성우[流星雨](Lady Luck) </div>
             <div id="b" class="song"> 10. BEAUTIFUL</div>
         </div>
       </div>
+      <div><h2>THE WAR</h2></div>
+      <div id="theWar" class="album">
+          <img id="theWarAlbum" src="../media/albums/exoTheWar.jpg">
+          <div id="expand" class="expand">
+              <div id="te" class="song"> 1.전야(前夜)(The Eve) </div>
+              <div id="kkb" class="song"> 2. Ko Ko Bop</div>
+              <div id="wud" class="song"> 3. What U Do?</div>
+              <div id="f" class="song"> 4. Forever</div>
+              <div id="d" class="song"> 5. 다이아몬드 (Diamond)</div>
+              <div id="ti" class="song"> 6. 너의 손짓 (Touch It)</div>
+              <div id="c" class="song"> 7. 소름 (Chill)</div>
+              <div id="wom" class="song"> 8. 기억을 걷는 밤 (Walk On Memories)</div>
+              <div id="gc" class="song"> 9. 내가 미쳐 (Going Crazy) </div>
+          </div>
+        </div>
     </div>
     <div id="player">
-
+      <div id="cd">
+        <div id="record" class="ui-widget-content">
+        </div>
+      </div>
+      <div id="play" class="ui-widget-header">
+        
+      </div>
+      <div id="playerAudio">
+        <audio controls>
+        </audio>
+      </div>
     </div>
   </div>
 
   <script>
-    $("#music").css($(window).height());
+    
 
+    var player = document.querySelector("#playerAudio");
+    var cdStart = document.querySelector("#record");
+    var cdDisplay = document.querySelector("#play");
     window.onload = function(){
       $("#exodus #expand").hide();
+      $("#theWar #expand").hide();
+      //imageSize.reverse();
+      //imageSize.play();
     }
 
+    var image = anime({
+          targets: '#playImg',
+          scale: 0.5,
+          rotate: '1turn',
+          duration: 2000,
+          complete: function(){
+            image.restart();
+          }
+        });
+
+  
     $("#exodusAlbum").click(function(){
       if($("#exodus #expand").is(":visible"))
       {
@@ -56,7 +113,390 @@
       else{
         $("#exodus #expand").show();
       }
-    })
+      
+    });
+
+    $("#theWarAlbum").click(function(){
+      if($("#theWar #expand").is(":visible"))
+      {
+        $("#theWar #expand").hide();
+      }
+      else{
+        $("#theWar #expand").show();
+      }
+      
+    });
+
+    if($("#exodus #expand").is(":visible"))
+      {
+      //play call me baby
+      $("#exodus #cmb").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/cmb.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> Call Me Baby";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                }) 
+            }
+          })
+          
+        })
+        //play transformer
+      $("#exodus #t").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/t.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> TRANSFORMER";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                }) 
+            }
+          })
+        })
+        //play what if
+      $("#exodus #wi").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/wi.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 시선들, 시선 하나 (What if...)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play my answer
+      $("#exodus #ma").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/ma.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> MY ANSWER";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+      //play exodus
+      $("#exodus #e").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/e.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> EXODUS";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })  
+      //play el dorado
+      $("#exodus #ed").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/ed.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> EL DORADO";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+      //play playboy
+      $("#exodus #p").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/p.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> PLAYBOY";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play hurt
+      $("#exodus #h").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/h.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> HURT";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play lady luck
+      $("#exodus #ll").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/ll.mp3" type="audio/mp3"></audio>';
+              cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 유성우[流星雨](Lady Luck)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play beautiful
+        $("#exodus #b").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/b.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> BEAUTIFUL";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+    }
+
+    //THE WAR ALBUM
+    if($("#theWar #expand").is(":visible"))
+      {
+      //play the eve
+      $("#theWar #te").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/te.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 전야(前夜)(The Eve)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play kokobop
+      $("#theWar #kkb").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/kkb.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> Ko Ko Bop";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play what u do 
+      $("#theWar #wud").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/wud.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> WHAT U DO?";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play forever
+      $("#theWar #f").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/f.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> Forever";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+      //play diamond
+      $("#theWar #d").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/d.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 다이아몬드 (Diamond)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })  
+      //play touch it
+      $("#theWar #ti").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/ti.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 너의 손짓 (Touch It)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+      //play playboy
+      $("#theWar #c").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/c.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 소름 (Chill)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play walk on memories
+      $("#theWar #wom").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/wom.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 기억을 걷는 밤 (Walk On Memories)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+        //play going crazy
+      $("#theWar #gc").click(function(){
+          cdStart.innerHTML= '<img src="../media/record.svg.svg">'
+          $("#record img").draggable();
+          $("#player").droppable({
+            drop: function(event, ui){
+              player.innerHTML = '<audio autoplay controls><source src="../media/songs/gc.mp3" type="audio/mp3"></audio>';
+                cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
+              cdStart.innerHTML = "<p>Currently Playing:<br/> 내가 미쳐 (Going Crazy)";
+                var rotate = anime({
+                  targets: '#playImg',
+                  durration: 5000,
+                  rotate:'1turn',
+                  loop: true,
+                  easing: 'linear'
+                })
+            }
+          })
+        })
+    }
   </script>
 </body>
 </html>
