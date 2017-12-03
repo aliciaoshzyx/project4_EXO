@@ -26,7 +26,7 @@ h3{
     flex-direction:column;
 }
 .instructions{
-    color: #FCFFB7;
+    color: #A7A7A7;
     margin:0 auto;
 }
 
@@ -39,6 +39,7 @@ h3{
     flex: 0 0 65%;
     max-height: 45vw;
     overflow-y:scroll;
+    border: 5px solid #171717;
 }
 
 #music img{
@@ -71,7 +72,7 @@ h3{
 #player{
     flex: 0 0 35%;
     margin-left:5%;
-    margin-top:5%;
+    margin-top:2%;
 }
 
 #cd{
