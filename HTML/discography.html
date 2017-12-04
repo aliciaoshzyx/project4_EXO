@@ -140,9 +140,9 @@
               cdDisplay.innerHTML = '<img id="playImg" src="../media/record.svg.svg">';
               cdStart.innerHTML = "<p>Currently Playing:<br/> Call Me Baby";
                 
-              $("playerAudio").click = function(){console.log("clicked")};
-              if(document.getElementById("playing").paused == true){
-                player.innerHTML = '<audio autoplay controls id="playing"><source src="../media/songs/cmb.mp3" type="audio/mp3"></audio>';
+              //setInterval(console.log(document.getElementById("playing").paused), 1000);
+              //if(document.getElementById("playing").paused == true){
+              // player.innerHTML = '<audio autoplay controls id="playing"><source src="../media/songs/cmb.mp3" type="audio/mp3"></audio>';
                 var rotate = anime({
                   targets: '#playImg',
                   durration: 5000,
@@ -150,10 +150,10 @@
                   loop: true,
                   easing: 'linear',
                 })
-              }
-              if(document.getElementById("playing").paused == false){
-                player.innerHTML = '<audio autoplay controls><source src="../media/songs/cmb.mp3" type="audio/mp3"></audio>';
-              }
+              //}
+              //if(document.getElementById("playing").paused == false){
+              //  player.innerHTML = '<audio autoplay controls><source src="../media/songs/cmb.mp3" type="audio/mp3"></audio>';
+              //}
             }
           })
           
