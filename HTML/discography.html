@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -9,8 +10,78 @@
     <script href="JS/anime.min.js"></script>
   <link rel="stylesheet" href="../CSS/discography.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../JS/anime.min.js"></script>
+  <link rel="stylesheet" href="../CSS/memberInfo.css">
+  <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script>
+      window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
+  </script>
 </head>
 
 <body>
+    <div id="header" class="center">
+        <h2><a href="navigation.html">Home</a></h2>
+      </div>
+      <h4 class="center">EXO's Discography</h4>
+  <div id="instructions">
+    
+    <p class="center instructions">Click an album to view its tracks</p>
+    <p class="center instructions">Click a song to make it into a cd</p>
+    <p class="center instructions">Click and drag the cd to the mp3 player to play</p>
+  </div>
+  <div id=content>
+    <div id="music">
+        <div><h2>EXODUS</h2></div>
+      <div id="exodus" class="album">
+        <img id="exodusAlbum" src="../media/albums/exoEXODUS.jpg">
+        <div id="expand" class="expand">
+            <div id="cmb" class="song"> 1. CALL ME BABY</div>
+            <div id="t" class="song"> 2. TRANSFORMER</div>
+            <div id="wi" class="song"> 3. 시선들, 시선 하나 (What if...)</div>
+            <div id="ma" class="song"> 4. MY ANSWER</div>
+            <div id="e" class="song"> 5. EXODUS</div>
+            <div id="ed" class="song"> 6. EL DORADO</div>
+            <div id="p" class="song"> 7. PLAYBOY</div>
+            <div id="h" class="song"> 8. HURT</div>
+            <div id="ll" class="song"> 9.유성우[流星雨](Lady Luck) </div>
+            <div id="b" class="song"> 10. BEAUTIFUL</div>
+        </div>
+      </div>
+      <div><h2>THE WAR</h2></div>
+      <div id="theWar" class="album">
+          <img id="theWarAlbum" src="../media/albums/exoTheWar.jpg">
+          <div id="expand" class="expand">
+              <div id="te" class="song"> 1.전야(前夜)(The Eve) </div>
+              <div id="kkb" class="song"> 2. Ko Ko Bop</div>
+              <div id="wud" class="song"> 3. What U Do?</div>
+              <div id="f" class="song"> 4. Forever</div>
+              <div id="d" class="song"> 5. 다이아몬드 (Diamond)</div>
+              <div id="ti" class="song"> 6. 너의 손짓 (Touch It)</div>
+              <div id="c" class="song"> 7. 소름 (Chill)</div>
+              <div id="wom" class="song"> 8. 기억을 걷는 밤 (Walk On Memories)</div>
+              <div id="gc" class="song"> 9. 내가 미쳐 (Going Crazy) </div>
+          </div>
+        </div>
+    </div>
+    <div id="player">
+      <div id="cd">
+        <div id="record" class="ui-widget-content">
+        </div>
+      </div>
+      <div id="play" class="ui-widget-header">
+        
+      </div>
+      <div id="playerAudio">
+        <audio controls>
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <script src=../JS/discography.js></script>
 </body>
 </html>
