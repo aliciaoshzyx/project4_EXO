@@ -1,0 +1,19 @@
+*{
+    background-color: #1D1D1D;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+h2{
+    color:#838383;
+    text-align: center;
+}
+
+#home, #info, #awards, #disc{
+    display:flex;
+}

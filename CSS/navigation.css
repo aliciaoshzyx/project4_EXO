@@ -28,31 +28,18 @@ img{
 }
 
 .link{
-    position:absolute;
-    top:5px;
-    bottom:0;
-    right:0;
-    left:45px;
-    height: 500px;
-    width:300px;
     opacity: 0;
     visibility: hidden;
-    
-
     transition: opacity 0.5s, visibility 0.5s;
 }
 
-#x .link{
-    left: 450px;
+#doc{
+    text-align: center;
+    
 }
 
-#o .link{
-    left:840px;
-}
-
-h3{
-    margin-top:240px;
-    margin-bottom: 240px;
+#doc a{
+    color:gold;
 }
 
 a{
@@ -66,16 +53,6 @@ a{
 
     .link{
         visibility: visible;
-    }
-
-    #x .link{
-        top: 505px;
-        left:35px;
-    }
-    
-    #o .link{
-        top:1010px;
-        left:35px;
     }
 }
 
