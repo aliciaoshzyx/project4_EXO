@@ -6,11 +6,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Member Info</title>
-    <script href="JS/anime.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JS/anime.min.js"></script>
     <link rel="stylesheet" href="../CSS/memberInfo.css">
+    <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <script>
+        window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
+    </script>
+ 
 </head>
 
+
 <body>
+        <div id=navLinks>
+            <h2><a href="navigation.html">Home</a></h2>
+        </div>
+        <div id="themeChanger">
+            <div id="mamaAlbum"><img src="../media/albums/exoMAMA.jpg" alt="mamaAlbumCover" class="themeImage"></div>
+            <div id="xoxoAlbum"><img src="../media/albums/exoXOXO.jpg" alt="XOXOAlbumCover" class ="themeImage"></div>
+            <div id="growlAlbum"><img src="../media/albums/exoGrowl.jpg" alt="growlAlbumCover" class ="themeImage"></div>
+            <div id="midAlbum"><img src="../media/albums/exoMiracles.jpg" alt="miraclesInDecemberAlbumCover" class ="themeImage"></div>
+            <div id="overdoseAlbum"><img src="../media/albums/exoOverdose.jpg" alt="overdoseAlbumCover" class ="themeImage currentTheme"></div>
+            <div id="exodusAlbum"><img src="../media/albums/exoEXODUS.jpg" alt="EXODUSAlbumCover" class ="themeImage"></div>
+            <div id="lmrAlbum"><img src="../media/albums/exoLMR.jpg" alt="loveMeRightAlbumCover" class ="themeImage"></div>
+            <div id="lmrruAlbum"><img src="../media/albums/exoLMRRU.jpg" alt="loveMeRightRomanticUniverseAlbumCover" class ="themeImage"></div>
+            <div id="sfyAlbum"><img src="../media/albums/exoSingForYou.jpg" alt="singForYouAlbumCover" class ="themeImage"></div>
+            <div id="exactAlbum"><img src="../media/albums/exoEXACT.jpg" alt="EXACTAlbumCover" class ="themeImage"></div>
+            <div id="lottoAlbum"><img src="../media/albums/exoLotto.jpg" alt="lottoAlbumCover" class ="themeImage"></div>
+            <div id="coAlbum"><img src="../media/albums/exoComingOver.jpg" alt="comingOverAlbumCover" class ="themeImage"></div>
+            <div id="flAlbum"><img src="../media/albums/exoForLife.jpg" alt="forLifeAlbumCover" class ="themeImage"></div>
+            <div id="thewarAlbum"><img src="../media/albums/exoTheWar.jpg" alt="theWarAlbumCover" class ="themeImage"></div>
+            <div id="powerAlbum"><img src="../media/albums/exoPower.jpg" alt="powerAlbumCover" class ="themeImage"></div>
+
+            
+        </div>
+        <h3 id="themeName" class="center">Current Theme: Overdose</h3>
+        <div id ="content">
+            <div id="row1">
+                <div id="sehun" class="member">
+                    <div id="collapse" id="collapse">
+                        <div id="collapseImg" class="collapseImg colI">
+                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div>
+                            <h2 class="center">SEHUN</h2>
+                        </div>
+                    </div>
+                    <div id="expand">
+                        <div id="image" class = "image expandImg">
+                            <img src="../media/sehun/sehunO.jpg" alt="sehunOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div id="info" class ="infoSection">
+                            <h1 id="name">OH SEHUN</h1>
+                            <div class="iconInfo">
+                                <div class="row">
+                                    <div id="birthday" class="icon">
+                                        <h4>BIRTHDAY</h4>
+                                        <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="height" class="icon">
+                                        <h4>HEIGHT</h4>
+                                        <i class="fa fa-arrows-v" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div id="nationality" class="icon">
+                                        <h4>NATIONALITY</h4>
+                                        <i class="fa fa-flag" aria-hidden="true"></i>
+                                    </div>      
+                                    <div id="unit" class="icon">
+                                        <h4>UNIT</h4>
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    
+                                    <div id="position" class="icon">
+                                        <h4>POSITION</h4>
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+                                    </div>
+                                    <div id="power" class="icon">
+                                        <h4>POWER</h4>
+                                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sehunDisplayBox" class="displayBox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="kai" class="member">
+                    <div id="collapse" id="collapse">
+                        <div id="collapseImg" class="collapseImg colI">
+                            <img src="../media/kai/kaiO.jpg" alt="kaiOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div>
+                            <h2 class="center">KAI</h2>
+                        </div>
+                    </div>
+                    <div id="expand">
+                        <div id="image" class = "image expandImg">
+                            <img src="../media/kai/kaiO.jpg" alt="sehunKaiTeaserImage" class="themeImg">
+                        </div>
+                        <div id="info" class ="infoSection">
+                            <h1 id="name">KIM JONGIN</h1>
+                            <div class="iconInfo">
+                                    <div class="row">
+                                            <div id="birthday" class="icon">
+                                                <h4>BIRTHDAY</h4>
+                                                <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="height" class="icon">
+                                                <h4>HEIGHT</h4>
+                                                <i class="fa fa-arrows-v" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="nationality" class="icon">
+                                                <h4>NATIONALITY</h4>
+                                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                            </div>      
+                                            <div id="unit" class="icon">
+                                                <h4>UNIT</h4>
+                                                <i class="fa fa-users" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            <div id="position" class="icon">
+                                                <h4>POSITION</h4>
+                                                <i class="fa fa-male" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="power" class="icon">
+                                                <h4>POWER</h4>
+                                                <i class="fa fa-power-off" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div id="kaiDisplayBox" class="displayBox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chanyeol" class="member">
+                    <div id="collapse" id="collapse">
+                        <div id="collapseImg" class="collapseImg colI">
+                            <img src="../media/chanyeol/chanyeolO.jpg" alt="chanyeolOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div>
+                            <h2 class="center">CHANYEOL</h2>
+                        </div>
+                    </div>
+                    <div id="expand">
+                        <div id="image" class = "image expandImg">
+                            <img src="../media/chanyeol/chanyeolO.jpg" alt="chanyeolOverdoseTeaserImage" class="themeImg">
+                        </div>
+                        <div id="info" class ="infoSection">
+                            <h1 id="name">PARK CHANYEOL</h1>
+                            <div class="iconInfo">
+                                    <div class="row">
+                                            <div id="birthday" class="icon">
+                                                <h4>BIRTHDAY</h4>
+                                                <i id="cake" class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="height" class="icon">
+                                                <h4>HEIGHT</h4>
+                                                <i class="fa fa-arrows-v" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="nationality" class="icon">
+                                                <h4>NATIONALITY</h4>
+                                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                            </div>      
+                                            <div id="unit" class="icon">
+                                                <h4>UNIT</h4>
+                                                <i class="fa fa-users" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            <div id="position" class="icon">
+                                                <h4>POSITION</h4>
+                                                <i class="fa fa-male" aria-hidden="true"></i>
+                                            </div>
+                                            <div id="power" class="icon">
+                                                <h4>POWER</h4>
+                                                <i class="fa fa-power-off" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div id="chanyeolDisplayBox" class="displayBox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id=""> 
+                </div>   
+        </div>
+        </div>   
+    <script src="../JS/memberInfo.js"></script>
 </body>
-</html>
