@@ -6,11 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>groupInfo</title>
-  <script href="JS/anime.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../JS/anime.min.js"></script>
   <link rel="stylesheet" href="../CSS/groupInfo.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script>
+      window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
+  </script>
 </head>
 
 <body>
+  <div id="header">
+    <h2><a href="navigation.html">Home</a></h2>
+  </div>
+  <div id="awards">
+    <h1 class="center">Awards</h1>
+    <h3 id="instructions" class="center">Click a trophy to show more information</br>Click its spot again to put it back</h3>
+    <div id="daesangs">
+      <h2 class="center">Daesangs (Grand Prize)</h2>
+      <div id="shelf1trophies" class="shelfTop">
+        <div id="t1">
+          <img src="../media/cup.svg" class="trophy">
+        </div>
+        <div id="t2">
+            <img src="../media/cup.svg" class="trophy">
+        </div>
+        <div id="t3">
+          <img src="../media/cup.svg" class="trophy">
+        </div>
+        <div id="t4">
+          <img src="../media/cup.svg" class="trophy">
+        </div>
+        <div id="t5">
+          <img src="../media/cup.svg" class="trophy">
+        </div>
+      </div>
+      <div id="shelf1" class="shelf">
+        <div><p>2016 MAMA</br>Album of the Year</p></div>
+        <div><p>2016 MMA</br>Artist of the Year</p></div>
+        <div><p>2017 GDA</br>Grand Prize</p></div>
+        <div><p>2017 SMA</br>Grand Prize</p></div>
+        <div><p>2016 AAA</br>Grand Prize</p></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="information">
+      <div id="left" class="center">
+          <h3 id="show" class="transparent">Click a trophy</h3>
+          <h3 id="date" class="transparent">to show more info</h3>
+      </div>
+    
+    <div id="middle" >
+      <img src ="../media/exoLogoSVG.svg" alt="exoLogo" class="logo">
+    </div>
+    <div id="right" class="center">
+        <h3 id="songAlbum" class="transparent">Click a trophy</h3>
+        <h3 id="winNum" class="transparent">to show more info</h3>
+    </div>
+    
+  </div>
+
+  <script src="../JS/groupInfo.js"></script>
 </body>
 </html>

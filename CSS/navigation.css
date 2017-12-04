@@ -1,22 +1,59 @@
+
 *{
     background-color: black;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
-svg{
-    width: 90%;
-    height:90%;
+img{
+    width: 300px;
+    height:500px;
 }
 
 #logo{
-    margin-left: 5%;
+    display:flex;
+    width:100%;
 }
 
-#E, #X, #O{
-    fill:#bcbcbc;
+#logo div{
+    flex: 0 0 33%;
+    text-align:center;
+}
+.img{
+    position:relative;
 }
 
-
-#eNav, #xNav, #oNav{
-    display: none;
+.letter:hover .link{
+    visibility: visible;
+    opacity:0.75;
 }
+
+.link{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+#doc{
+    text-align: center;
+    
+}
+
+#doc a{
+    color:gold;
+}
+
+a{
+    text-decoration:none;
+}
+
+@media (max-width:625px){
+    #logo{
+        flex-direction:column;
+    }
+
+    .link{
+        visibility: visible;
+    }
+}
+
