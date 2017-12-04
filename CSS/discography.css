@@ -39,7 +39,6 @@ h3{
     flex: 0 0 65%;
     max-height: 45vw;
     overflow-y:scroll;
-    border: 5px solid #171717;
 }
 
 #music img{
