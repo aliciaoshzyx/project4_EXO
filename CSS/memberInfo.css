@@ -107,7 +107,7 @@ i{
     flex: 0 0 30%;
 }
 
-#expand{
+#expand, #kexpand, #cexpand{
     display:flex;
     width:100%;
     margin-bottom: 3em;
@@ -117,12 +117,12 @@ i{
     flex: 0 0 50%;
 }
 
-#info{
+#info, #kinfo, #cinfo{
     width:100%;
     flex: 0 0 50%;
 }
 
-#info h1{
+#info h1, #kinfo h1, #cinfo h1{
     font-size:3vw;
     margin-top:3px;
     text-align: center;
@@ -172,9 +172,6 @@ i{
     color:#BAFEB3;
 }
 
-h4{
-    color:#7FF96C;
-}
 
 @media (max-width: 800px)
 {
@@ -198,11 +195,11 @@ h4{
         flex: 0 0 100%;
     }
 
-    #expand img{
+    #expand img, #kexpand img, #cexpand img{
         display: none;
     }
 
-    #info{
+    #info, #kinfo, #cinfo{
         
         text-align: center;
     }
@@ -212,7 +209,7 @@ h4{
         
     }
 
-    #info h1{
+    #info h1, #kinfo h1, #cinfo h1{
         font-size:8vw;
     }
 

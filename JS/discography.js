@@ -2,174 +2,174 @@ var player = document.querySelector("#playerAudio");
 var cdStart = document.querySelector("#record");
 var cdDisplay = document.querySelector("#play");
 window.onload = function(){
-  $("#exodus #expand").hide();
-  $("#theWar #expand").hide();
-  $("#mama #expand").hide();
-  $("#xoxo #expand").hide();
-  $("#growl #expand").hide();
-  $("#midA #expand").hide();
-  $("#overdose #expand").hide();
-  $("#lmrA #expand").hide();
-  $("#lmrruA #expand").hide();
-  $("#sfyA #expand").hide();
-  $("#exact #expand").hide();
-  $("#lotto #expand").hide();
-  $("#coming #expand").hide();
-  $("#forlife #expand").hide();
-  $("#power #expand").hide();
+  $("#exodus #exoexpand").hide();
+  $("#theWar #twexpand").hide();
+  $("#mama #mexpand").hide();
+  $("#xoxo #xexpand").hide();
+  $("#growl #gexpand").hide();
+  $("#midA #midexpand").hide();
+  $("#overdose #oexpand").hide();
+  $("#lmrA #lmrexpand").hide();
+  $("#lmrruA #lmrruexpand").hide();
+  $("#sfyA #sfyexpand").hide();
+  $("#exact #exaexpand").hide();
+  $("#lotto #lexpand").hide();
+  $("#coming #coexpand").hide();
+  $("#forlife #flexpand").hide();
+  $("#power #pexpand").hide();
   //imageSize.reverse();
   //imageSize.play();
 }
 
 $("#exodusAlbum").click(function(){
-  if($("#exodus #expand").is(":visible"))
+  if($("#exodus #exoexpand").is(":visible"))
   {
-    $("#exodus #expand").hide();
+    $("#exodus #exoexpand").hide();
   }
   else{
-    $("#exodus #expand").show();
+    $("#exodus #exoexpand").show();
   }
   
 });
 
 $("#theWarAlbum").click(function(){
-  if($("#theWar #expand").is(":visible"))
+  if($("#theWar #twexpand").is(":visible"))
   {
-    $("#theWar #expand").hide();
+    $("#theWar #twexpand").hide();
   }
   else{
-    $("#theWar #expand").show();
+    $("#theWar #twexpand").show();
   }
   
 });
 
 $("#mamaAlbum").click(function(){
-  if($("#mama #expand").is(":visible"))
+  if($("#mama #mexpand").is(":visible"))
   {
-    $("#mama #expand").hide();
+    $("#mama #mexpand").hide();
   }
   else{
-    $("#mama #expand").show();
+    $("#mama #mexpand").show();
   }
   
 });
 $("#xoxoAlbum").click(function(){
-  if($("#xoxo #expand").is(":visible"))
+  if($("#xoxo #xexpand").is(":visible"))
   {
-    $("#xoxo #expand").hide();
+    $("#xoxo #xexpand").hide();
   }
   else{
-    $("#xoxo #expand").show();
+    $("#xoxo #xexpand").show();
   }
   
 });
 $("#growlAlbum").click(function(){
-  if($("#growl #expand").is(":visible"))
+  if($("#growl #gexpand").is(":visible"))
   {
-    $("#growl #expand").hide();
+    $("#growl #gexpand").hide();
   }
   else{
-    $("#growl #expand").show();
+    $("#growl #gexpand").show();
   }
   
 });
 $("#midAlbum").click(function(){
-  if($("#midA #expand").is(":visible"))
+  if($("#midA #midexpand").is(":visible"))
   {
-    $("#midA #expand").hide();
+    $("#midA #midexpand").hide();
   }
   else{
-    $("#midA #expand").show();
+    $("#midA #midexpand").show();
   }
   
 });
 $("#overdoseAlbum").click(function(){
-  if($("#overdose #expand").is(":visible"))
+  if($("#overdose #oexpand").is(":visible"))
   {
-    $("#overdose #expand").hide();
+    $("#overdose #oexpand").hide();
   }
   else{
-    $("#overdose #expand").show();
+    $("#overdose #oexpand").show();
   }
   
 });
 $("#lmrAlbum").click(function(){
-  if($("#lmrA #expand").is(":visible"))
+  if($("#lmrA #lmrexpand").is(":visible"))
   {
-    $("#lmrA #expand").hide();
+    $("#lmrA #lmrexpand").hide();
   }
   else{
-    $("#lmrA #expand").show();
+    $("#lmrA #lmrexpand").show();
   }
   
 });
 $("#lmrruAlbum").click(function(){
-  if($("#lmrruA #expand").is(":visible"))
+  if($("#lmrruA #lmrruexpand").is(":visible"))
   {
-    $("#lmrruA #expand").hide();
+    $("#lmrruA #lmrruexpand").hide();
   }
   else{
-    $("#lmrruA #expand").show();
+    $("#lmrruA #lmrruexpand").show();
   }
   
 });
 $("#sfyAlbum").click(function(){
-  if($("#sfyA #expand").is(":visible"))
+  if($("#sfyA #sfyexpand").is(":visible"))
   {
-    $("#sfyA #expand").hide();
+    $("#sfyA #sfyexpand").hide();
   }
   else{
-    $("#sfyA #expand").show();
+    $("#sfyA #sfyexpand").show();
   }
   
 });
 $("#exactAlbum").click(function(){
-  if($("#exact #expand").is(":visible"))
+  if($("#exact #exaexpand").is(":visible"))
   {
-    $("#exact #expand").hide();
+    $("#exact #exaexpand").hide();
   }
   else{
-    $("#exact #expand").show();
+    $("#exact #exaexpand").show();
   }
   
 });
 $("#lottoAlbum").click(function(){
-  if($("#lotto #expand").is(":visible"))
+  if($("#lotto #lexpand").is(":visible"))
   {
-    $("#lotto #expand").hide();
+    $("#lotto #lexpand").hide();
   }
   else{
-    $("#lotto #expand").show();
+    $("#lotto #lexpand").show();
   }
   
 });
 $("#comingAlbum").click(function(){
-  if($("#coming #expand").is(":visible"))
+  if($("#coming #coexpand").is(":visible"))
   {
-    $("#coming #expand").hide();
+    $("#coming #coexpand").hide();
   }
   else{
-    $("#coming #expand").show();
+    $("#coming #coexpand").show();
   }
   
 });
 $("#forlifeAlbum").click(function(){
-  if($("#forlife #expand").is(":visible"))
+  if($("#forlife #flexpand").is(":visible"))
   {
-    $("#forlife #expand").hide();
+    $("#forlife #flexpand").hide();
   }
   else{
-    $("#forlife #expand").show();
+    $("#forlife #flexpand").show();
   }
   
 });
 $("#powerAlbum").click(function(){
-  if($("#power #expand").is(":visible"))
+  if($("#power #pexpand").is(":visible"))
   {
-    $("#power #expand").hide();
+    $("#power #pexpand").hide();
   }
   else{
-    $("#power #expand").show();
+    $("#power #pexpand").show();
   }
   
 });
@@ -177,10 +177,10 @@ $("#powerAlbum").click(function(){
 /***********************
  * MAMA ALBUM
  **********************/
-if($("#mama #expand").is(":visible"))
+if($("#mama #mexpand").is(":visible"))
   {
   //mama
-  $("#ma").click(function(){
+  $("#m").click(function(){
       cdStart.innerHTML= '<img src="../media/record.svg.svg">'
       $("#record img").draggable();
       $("#player").droppable({
@@ -307,7 +307,7 @@ if($("#mama #expand").is(":visible"))
 /******************************
  * XOXO ALBUM
  *****************************/
-if($("#xoxo #expand").is(":visible"))
+if($("#xoxo #xexpand").is(":visible"))
   {
   //wolf
   $("#wolf").click(function(){
@@ -551,7 +551,7 @@ if($("#xoxo #expand").is(":visible"))
 /******************************
  * GROWL ALBUM
  *****************************/
-if($("#growl #expand").is(":visible"))
+if($("#growl #gexpand").is(":visible"))
   {
   //play growl
   $("#g").click(function(){
@@ -624,7 +624,7 @@ if($("#growl #expand").is(":visible"))
  /******************************
  * MIRACLES ALBUM
  *****************************/
-if($("#midA #expand").is(":visible"))
+if($("#midA #midexpand").is(":visible"))
   {
   //play mid
   $("#mid").click(function(){
@@ -754,7 +754,7 @@ if($("#midA #expand").is(":visible"))
  /******************************
  * OVERDOSE ALBUM
  *****************************/
-if($("#overdose #expand").is(":visible"))
+if($("#overdose #oexpand").is(":visible"))
   {
   //play overdose
   $("#o").click(function(){
@@ -884,7 +884,7 @@ if($("#overdose #expand").is(":visible"))
  /******************************
  * EXODUS ALBUM
  *****************************/
-if($("#exodus #expand").is(":visible"))
+if($("#exodus #exoexpand").is(":visible"))
   {
   //play call me baby
   $("#exodus #cmb").click(function(){
@@ -1091,7 +1091,7 @@ if($("#exodus #expand").is(":visible"))
 /******************************
  * LOVE ME RIGHT ALBUM
  *****************************/
-if($("#lmrA #expand").is(":visible"))
+if($("#lmrA #lmrexpand").is(":visible"))
   {
   //play call me baby
   $("#lmr").click(function(){
@@ -1183,7 +1183,7 @@ if($("#lmrA #expand").is(":visible"))
  /******************************
  * LMR ROMANTIC UNIVERSE ALBUM
  *****************************/
-if($("#lmrruA #expand").is(":visible"))
+if($("#lmrruA #lmrruexpand").is(":visible"))
   {
   //play lmrru
   $("#lmrru").click(function(){
@@ -1214,7 +1214,7 @@ if($("#lmrruA #expand").is(":visible"))
       })
       
     })
-    //play transformer
+    //play drop that
   $("#dt").click(function(){
       cdStart.innerHTML= '<img src="../media/record.svg.svg">'
       $("#record img").draggable();
@@ -1275,7 +1275,7 @@ if($("#lmrruA #expand").is(":visible"))
 /******************************
  * SING FOR YOU ALBUM
  *****************************/
-if($("#sfyA #expand").is(":visible"))
+if($("#sfyA #sfyexpand").is(":visible"))
   {
   //play unfair
   $("#u").click(function(){
@@ -1386,7 +1386,7 @@ if($("#sfyA #expand").is(":visible"))
  /******************************
  * EXACT ALBUM
  *****************************/
-if($("#exact #expand").is(":visible"))
+if($("#exact #exaexpand").is(":visible"))
   {
   //lucky one
   $("#lo").click(function(){
@@ -1574,7 +1574,7 @@ if($("#exact #expand").is(":visible"))
 /******************************
  * LOTTO ALBUM
  *****************************/
-if($("#lotto #expand").is(":visible"))
+if($("#lotto #lexpand").is(":visible"))
   {
   //play lotto
   $("#l").click(function(){
@@ -1666,7 +1666,7 @@ if($("#lotto #expand").is(":visible"))
 /******************************
  * COMING OVER ALBUM
  *****************************/
-if($("#coming #expand").is(":visible"))
+if($("#coming #coexpand").is(":visible"))
   {
   //play coming over
   $("#co").click(function(){
@@ -1796,7 +1796,7 @@ if($("#coming #expand").is(":visible"))
 /******************************
  *  FOR LIFE ALBUM
  *****************************/
-if($("#forlife #expand").is(":visible"))
+if($("#forlife #flexpand").is(":visible"))
   {
   //play for life
   $("#fl").click(function(){
@@ -1907,7 +1907,7 @@ if($("#forlife #expand").is(":visible"))
 /******************************
  * THE WAR ALBUM
  *****************************/
-if($("#theWar #expand").is(":visible"))
+if($("#theWar #twexpand").is(":visible"))
   {
   //play the eve
   $("#theWar #te").click(function(){
@@ -2085,7 +2085,7 @@ if($("#theWar #expand").is(":visible"))
 /******************************
  * POWER ALBUM
  *****************************/
-if($("#power #expand").is(":visible"))
+if($("#power #pexpand").is(":visible"))
   {
   //play power
   $("#po").click(function(){

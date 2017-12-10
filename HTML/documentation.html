@@ -16,36 +16,63 @@
     <div id=navLinks>
         <h2><a href="navigation.html">Home</a></h2>
     </div>
-    <div id=home>
-        <h1>Home Page</h1>
-        <div id="technologies">
-        </div>
-        <div id="above">
-        </div>
-    </div>
+    <h1>Member Info Page</h1>
     <div id=info>
-        <h1>Member Info Page</h1>
-        <div id="technologies">
-        </div>
-        <div id="above">
+        
+        <div>
+            <p>The member info page is run primarily on jQuery but also with additions using anime.js.</p>
+            <p> The anime library provides how the member information is shown in the display box, controlling the toggling of the cooresponding 
+                information ot the icon clicked.</p>
+            <p> JQuery is used on this page is used primarily to create the theme changer. It detects clicking on portions of the page in order 
+                to remove children, append children, and change inner HTML on the site so that the images being displayed match the era of the 
+                album that was clicked. The theme changer was also created through adding and removing classes to manipulate css attributes for 
+                hovering and the thin red border around the selected album.</p>
+            
+            <p>On this page I used the javascript library anime.js. This library, I found, is relatively poorly documented but it was relatively 
+                easy to use for what I wanted to do on this page. I learned after spending a few hours trying to set up one animation and cause 
+                it to play multiple times that I would need to declare the animation each time I wanted to use it.</p>
+            <p>It also took quite a bit of time to gather all the media needed for this page, properly size it to remain relatively the same 
+                size, and then create the javascript for it. Origionally I had one member displayed on the page and creating the javascript to 
+                remove and append each image took a while to figure out and write. It was relatively easy, though time consuming, to add the other 
+                two members who are currently being displayed. I spent quite some time trying to find a good way to display which album was currently 
+                selected in the theme changer and after some research learned how to add and remove classes which bacame very helpful.</p>
         </div>
     </div>
+    <h1>Group Info (Awards) Page</h1>
     <div id=awards>
-        <h1>Group Info (Awards) Page</h1>
-        <div id="technologies">
+        
+        <div>
+            <p>The functionality of this page is primarily from the anime.js library. It took me a couple days of work and digging through the 
+                internet to find that you can reverse an animation with anime and how to do it. Anime does not have very well documented functions and so it was difficult 
+                to find. Another thing is that I had issues figuring out how to position animation transitions for responsive design so I switched 
+                to vw after some research and this page is really only viewable correctly in 2 views. </p>
+            <p>jQuery was also used here for displaying the informationwhen a trophy is moved using appending. Anime was used to make them fade into 
+                being displayed. </p>
         </div>
-        <div id="above">
+        <div>
         </div>
     </div>
+    <h1>Discography Page</h1>
     <div id=disc>
-        <h1>Discography Page</h1>
-        <div id="technologies">
-        </div>
-        <div id="above">
+       
+        <div>
+            <p>This page used anime, jquery, jquery ui, and HTML audio. Anime was used for the spinning of the record. My origional plan was to 
+                have the animation pause when you pause the music and I spend 6 hours or so trying various things to do that using different parts 
+                of the audio and placing the function for anime in different places but I was unable to get it working so now I consider it a way 
+                to tell that there is a song that can be played or is playing. jquery was used to append children with the record image above the 
+                player as well as controling visibility of songs. jQuery UI was used for the drag and drop functionality on the record. HTML audio 
+                was used to play the audio that was selected. It took about an hour to dig around and figure out how to get that to work the way 
+                I wanted it to with certain attributes.</p>
+            <p>This is the page I had the most fun with. it did, however, take a huge amount of time to get all the audio clips, change their format, 
+                create the records, and type out the lists. I originally had 2 albums on display but decided to add the others for fun and I'm glad I did.
         </div>
     </div>
     
     <div id="libraries">
+        <h1>Libraries Used and Resources</h1>
+        <p><a href=https://jquery.com/>jQuery</a></p>
+        <p><a href="https://jqueryui.com/">jQuery UI</a></p>
+        <p><a href=http://animejs.com/>anime.js</a></p>
     </div>
 </body>
 </html>

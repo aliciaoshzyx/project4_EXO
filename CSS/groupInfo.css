@@ -101,7 +101,6 @@ ul{
 
 .transparent{
     opacity: 0;
-    filter: alpha(0);
 }
 
 @media (max-width: 375px){
