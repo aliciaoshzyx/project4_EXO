@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="../CSS/discography.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
   <script src="../JS/anime.min.js"></script>
   <link rel="stylesheet" href="../CSS/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="../JS/jquery-ui-1.12.1/jquery-ui.js"></script>
+  
 
   <script>
       window.jQuery || document.write('<script src="../JS/jQuery.js"><\/script>')
@@ -34,6 +35,7 @@
   </div>
   <div id=content>
     <div id="music">
+      <div id="korean">
       <div><h2>MAMA</h2></div>
       <div id="mama" class="album">
         <img id="mamaAlbum" src="../media/albums/exoMAMA.jpg" alt="mamaAlbumCover">
@@ -124,16 +126,6 @@
             <div id="p2014" class="song"> 4. 약속 (EXO 2014)(Promise)</div>
         </div>
       </div>
-      <div><h2>Love Me Right Romantic Universe</h2></div>
-      <div id="lmrruA" class="album">
-        <img id="lmrruAlbum" src="../media/albums/exoLMRRU.jpg" alt="loveMeRightRomanticUniverseAlbumCover">
-        <div id="lmrruexpand" class="expand">
-            <div id="lmrru" class="song"> Love Me Right Romantic Universe</div>
-            <div id="dt" class="song"> Drop That</div>
-            <div id="lmrrulv" class="song"> Love Me Right Romantic Universe - Less Vocal</div>
-            <div id="dtlv" class="song"> Drop That - Less Vocal</div>
-        </div>
-      </div>
       <div><h2>Sing For You</h2></div>
       <div id="sfyA" class="album">
         <img id="sfyAlbum" src="../media/albums/exoSingForYou.jpg" alt="singForYouAlbumCover">
@@ -170,18 +162,7 @@
             <div id="mlcbr" class="song"> Monster (LDN Noise Creeper Bass Remix)</div>
         </div>
       </div>
-      <div><h2>Coming Over</h2></div>
-      <div id="coming" class="album">
-        <img id="comingAlbum" src="../media/albums/exoComingOver.jpg" alt="comingOverAlbumCover">
-        <div id="coexpand" class="expand">
-            <div id="co" class="song"> 1. Coming Over</div>
-            <div id="tac" class="song"> 2. TACTIX</div>
-            <div id="rt" class="song"> 3. Run This</div>
-            <div id="colv" class="song"> 4. Coming Over - Less Vocal</div>
-            <div id="taclv" class="song"> 5. TACTIX - Less Vocal</div>
-            <div id="rtlv" class="song"> 6. Run This - Less Vocal</div>
-        </div>
-      </div>
+      
       <div><h2>For Life</h2></div>
       <div id="forlife" class="album">
         <img id="forlifeAlbum" src="../media/albums/exoForLife.jpg" alt="forLifeAlbumCover">
@@ -196,19 +177,19 @@
       
       <div><h2>THE WAR</h2></div>
       <div id="theWar" class="album">
-          <img id="theWarAlbum" src="../media/albums/exoTheWar.jpg" alt="theWarAlbumCover">
-          <div id="twexpand" class="expand">
-              <div id="te" class="song"> 1.전야(前夜)(The Eve) </div>
-              <div id="kkb" class="song"> 2. Ko Ko Bop</div>
-              <div id="wud" class="song"> 3. What U Do?</div>
-              <div id="f" class="song"> 4. Forever</div>
-              <div id="d" class="song"> 5. 다이아몬드 (Diamond)</div>
-              <div id="ti" class="song"> 6. 너의 손짓 (Touch It)</div>
-              <div id="c" class="song"> 7. 소름 (Chill)</div>
-              <div id="wom" class="song"> 8. 기억을 걷는 밤 (Walk On Memories)</div>
-              <div id="gc" class="song"> 9. 내가 미쳐 (Going Crazy) </div>
-          </div>
+        <img id="theWarAlbum" src="../media/albums/exoTheWar.jpg" alt="theWarAlbumCover">
+        <div id="twexpand" class="expand">
+            <div id="te" class="song"> 1.전야(前夜)(The Eve) </div>
+            <div id="kkb" class="song"> 2. Ko Ko Bop</div>
+            <div id="wud" class="song"> 3. What U Do?</div>
+            <div id="f" class="song"> 4. Forever</div>
+            <div id="d" class="song"> 5. 다이아몬드 (Diamond)</div>
+            <div id="ti" class="song"> 6. 너의 손짓 (Touch It)</div>
+            <div id="c" class="song"> 7. 소름 (Chill)</div>
+            <div id="wom" class="song"> 8. 기억을 걷는 밤 (Walk On Memories)</div>
+            <div id="gc" class="song"> 9. 내가 미쳐 (Going Crazy) </div>
         </div>
+      </div>
         <div><h2>Power (Repackage)</h2></div>
         <div id="power" class="album">
           <img id="powerAlbum" src="../media/albums/exoPower.jpg" alt="powerAlbumCover">
@@ -218,6 +199,229 @@
               <div id="bo" class="song"> Boomerang (부메랑)</div>
               
           </div>
+        </div>
+        <div><h2>UNIVERSE</h2></div>
+        <div id="universe" class="album">
+          <img id="universeAlbum" src="../media/albums/exoUniverse.jpg" alt="universeAlbumCover">
+          <div id="pexpand" class="expand">
+              <p>Coming Soon</p>
+          </div>
+        </div>
+        </div>
+        <div id="chinese">
+            <div><h2>MAMA</h2></div>
+            <div id="mamaC" class="album">
+              <img id="mamaCAlbum" src="../media/albums/exoMAMAM.jpg" alt="mamaMAlbumCover">
+              <div id="mCexpand" class="expand">
+                  <div id="mC" class="song"> 1. MAMA</div>
+                  <div id="wilC" class="song"> 2. What Is Love  (爱就是什么？)</div>
+                  <div id="hisC" class="song"> 3. History (历史)</div>
+                  <div id="aC" class="song"> 4. Angel (你的世界)</div>
+                  <div id="tmC" class="song"> 5. Two Moons (双月之夜)</div>
+                  <div id="macC" class="song"> 6. Machine（机械）</div>
+              </div>
+            </div>
+            <div><h2>XOXO</h2></div>
+            <div id="xoxoC" class="album">
+              <img id="xoxoCAlbum" src="../media/albums/exoXOXO.jpg" alt="xoxoAlbumCover">
+              <div id="xCexpand" class="expand">
+                  <div id="wolfC" class="song"> 1. 狼与眉女 (Wolf)</div>
+                  <div id="bdcC" class="song"> 2. Baby Don't Cry (人鱼的眼泪)</div>
+                  <div id="bpC" class="song"> 3. Black Pearl（黑沴珠） </div>
+                  <div id="dgC" class="song"> 4. 蝴蝶少女 (Don't Go)</div>
+                  <div id="lotbC" class="song"> 5. Let Out the Beast（让出兽） </div>
+                  <div id="365C" class="song"> 6. 3.6.5（三六五）</div>
+                  <div id="haC" class="song"> 7. Heart Attack（心脏病发作）</div>
+                  <div id="ppC" class="song"> 8. 彼得潘 (Peter Pan)</div>
+                  <div id="babyC" class="song"> 9. Baby（第一步）</div>
+                  <div id="mlC" class="song"> 10. My Lady（我的女土）</div>
+                  <div id="wolfmC" class="song"> 11.狼与眉女 (Wolf) EXO-M Ver. </div>
+                  <div id="wolfkC" class="song"> 12. 늑대와 미녀 (Wolf) - Korean version</div>
+              </div>
+            </div>
+            <div><h2>咆哮 (Growl) (Repackage)</h2></div>
+            <div id="growlC" class="album">
+              <img id="growlCAlbum" src="../media/albums/exoGrowl.jpg" alt="growlAlbumCover">
+              <div id="gCexpand" class="expand">
+                  <div id="grC" class="song"> 咆哮 (Growl)</div>
+                  <div id="xC" class="song"> XOXO (Kisses & Hugs)</div>
+                  <div id="luC" class="song"> Lucky （幸运）</div>
+              </div>
+            </div>
+            <div><h2>Miracles in December</h2></div>
+            <div id="midCA" class="album">
+              <img id="midCAlbum" src="../media/albums/exoMIDM.jpg" alt="miraclesInDecemberAlbumCover">
+              <div id="midCexpand" class="expand">
+                  <div id="midC" class="song"> 1. 十二月的奇迹 (Miracles in December)</div>
+                  <div id="chdC" class="song"> 2. 圣诞节 Christmas Day</div>
+                  <div id="tsC" class="song"> 3. The Star</div>
+                  <div id="mttcC" class="song"> 4. 爱离开 My Turn To Cry</div>
+                  <div id="fsC" class="song"> 5. 初雪 (The First Snow)</div>
+                  <div id="midcoC" class="song"> 6. 十二月的奇迹 (Miracles in December) – Classical Orchestra Version</div>
+              </div>
+            </div>
+            <div><h2>Overdose</h2></div>
+            <div id="overdoseC" class="album">
+              <img id="overdoseCAlbum" src="../media/albums/exoOverdoseM.jpg" alt="overdoseAlbumCover">
+              <div id="oCexpand" class="expand">
+                  <div id="oC" class="song"> 1. 上瘾 (Overdose)</div>
+                  <div id="moonC" class="song"> 2. 月光 (Moonlight)</div>
+                  <div id="thC" class="song"> 3. 雷电 Thunder</div>
+                  <div id="rC" class="song"> 4. 奔跑 Run</div>
+                  <div id="lllC" class="song"> 5. 梦中梦 Love, Love, Love</div>
+                  <div id="oexoC" class="song"> 6. 上瘾 (Overdose) (EXO version)</div>
+              </div>
+            </div>
+            <div><h2>EXODUS</h2></div>
+            <div id="exodusC" class="album">
+              <img id="exodusCAlbum" src="../media/albums/exoEXODUSM.jpg" alt="exodusAlbumCover">
+              <div id="exoCexpand" class="expand">
+                  <div id="cmbC" class="song"> 1. CALL ME BABY (叫我)</div>
+                  <div id="tC" class="song"> 2. TRANSFORMER (变形女)</div>
+                  <div id="wiC" class="song"> 3. What if... (两个视线, 一个视线)</div>
+                  <div id="maC" class="song"> 4. MY ANSWER (我的答案)</div>
+                  <div id="eC" class="song"> 5. EXODUS (逃脱)</div>
+                  <div id="edC" class="song"> 6. EL DORADO (黄金国)</div>
+                  <div id="pC" class="song"> 7. PLAYBOY (坏男孩)</div>
+                  <div id="hC" class="song"> 8. HURT (伤害)</div>
+                  <div id="llC" class="song"> 9.流星雨 (Lady Luck) </div>
+                  <div id="bC" class="song"> 10. BEAUTIFUL (美)</div>
+              </div>
+            </div>
+            <div><h2>Love Me Right (Repackage)</h2></div>
+            <div id="lmrCA" class="album">
+              <img id="lmrCAlbum" src="../media/albums/exoLMRM.jpg" alt="loveMeRightAlbumCover">
+              <div id="lmrCexpand" class="expand">
+                  <div id="lmrC" class="song"> 1. LOVE ME RIGHT (漫遊宇宙)</div>
+                  <div id="tlC" class="song"> 2. Tender Love (就是愛)</div>
+                  <div id="filoC" class="song"> 3. First Love(初戀)</div>
+                  <div id="p2014C" class="song"> 4. 約定 (EXO 2014)(Promise)</div>
+              </div>
+            </div>
+            <div><h2>Sing For You</h2></div>
+            <div id="sfyCA" class="album">
+              <img id="sfyCAlbum" src="../media/albums/exoSingForYou.jpg" alt="singForYouAlbumCover">
+              <div id="sfyCexpand" class="expand">
+                  <div id="uC" class="song"> 1. 	Unfair (偏心)</div>
+                  <div id="sfyC" class="song"> 2. Sing for You (爲你而唱)</div>
+                  <div id="gxfC" class="song"> 3. Girl x Friend (女 x 友)</div>
+                  <div id="otsC" class="song"> 4. On the Snow (脚印)</div>
+                  <div id="liC" class="song"> 5. Lightsaber (光剑)</div>
+              </div>
+            </div>
+            <div><h2>EX'ACT</h2></div>
+            <div id="exactC" class="album">
+              <img id="exactCAlbum" src="../media/albums/exoEXACTM.png" alt="exactAlbumCover">
+              <div id="exaCexpand" class="expand">
+                  <p>Coming Soon </p>
+                <!--
+                  <div id="loC" class="song"> 1. Lucky One</div>
+                  <div id="moC" class="song"> 2. Monster</div>
+                  <div id="alC" class="song"> 3. Artificial Love</div>
+                  <div id="c9C" class="song"> 4. Cloud 9</div>
+                  <div id="heaC" class="song"> 5. Heaven</div>
+                  <div id="wnC" class="song"> 6. White Noise (白色噪音)</div>
+                  <div id="oaoC" class="song"> 7. One and Only (玻璃鱼缸)</div>
+                  <div id="tnkC" class="song"> 8. They Never Know</div>
+                  <div id="sC" class="song"> 9. Stronger </div>
+                -->
+              </div>
+            </div>
+            <div><h2>Lotto (Repackage)</h2></div>
+            <div id="lottoC" class="album">
+              <img id="lottoCAlbum" src="../media/albums/exoLottoM.jpg" alt="lottoAlbumCover">
+              <div id="lCexpand" class="expand">
+                  <p> Coming Soon  </p>
+                <!--
+                  <div id="lC" class="song"> Lotto</div>
+                  <div id="cbmdC" class="song"> Can't Bring Me Down</div>
+                  <div id="sdC" class="song"> She's Dreaming 梦</div>
+                  <div id="mlcbrC" class="song"> Monster (LDN Noise Creeper Bass Remix)</div>
+                -->
+              </div>
+            </div>
+            <div><h2>For Life</h2></div>
+            <div id="forlifeC" class="album">
+              <img id="forlifeCAlbum" src="../media/albums/exoForLife.jpg" alt="forLifeAlbumCover">
+              <div id="flCexpand" class="expand">
+                  <p> Coming Soon  </p>
+                <!--
+                  <div id="flC" class="song"> 1. For Life (一生一事)</div>
+                  <div id="ffyC" class="song"> 2. Falling For You (亿万分之一的奇迹)</div>
+                  <div id="wiwfcC" class="song"> 3. What I Want for Christmas (再续冬季)</div>
+                  <div id="tfC" class="song"> 4. Twenty Four (二十四小时)</div>
+                  <div id="whC" class="song"> 5. Winter Heat (暖冬)</div>
+                -->
+              </div>
+            </div>
+            <div><h2>THE WAR</h2></div>
+            <div id="theWarC" class="album">
+                <img id="theWarCAlbum" src="../media/albums/exoTheWarM.jpg" alt="theWarAlbumCover">
+                <div id="twCexpand" class="expand">
+                    <p> Coming Soon  </p>
+                  <!--
+                    <div id="teC" class="song"> 1.The Eve (破风) </div>
+                    <div id="kkbC" class="song"> 2. Ko Ko Bop (叩叩趴)</div>
+                    <div id="wudC" class="song"> 3. What U Do? (可爱·可恶)</div>
+                    <div id="fC" class="song"> 4. Forever (我加你等于永远)</div>
+                    <div id="dC" class="song"> 5. Diamond (C乐章)</div>
+                    <div id="tiC" class="song"> 6. Touch It (指语)</div>
+                    <div id="cC" class="song"> 7. Chill (寒噤)</div>
+                    <div id="womC" class="song"> 8. Walk On Memories (梦回暮夜)</div>
+                    <div id="gcC" class="song"> 9. Going Crazy (疯语者) </div>
+                  -->
+                </div>
+              </div>
+              <div><h2>Power (Repackage)</h2></div>
+              <div id="powerC" class="album">
+                <img id="powerCAlbum" src="../media/albums/exoPower.jpg" alt="powerAlbumCover">
+                
+                <div id="pCexpand" class="expand">
+                    <p> Coming Soon  </p>
+                  <!--
+                    <div id="poC" class="song"> POWER (超音力)</div>
+                    <div id="slC" class="song"> Sweet Lies (甜蜜謊言)</div>
+                    <div id="boC" class="song"> Boomerang (愛迴旋)</div>
+                  -->
+                </div>
+              </div>
+            </div>
+          <div id=japanese>
+            <div><h2>Love Me Right Romantic Universe</h2></div>
+            <div id="lmrruA" class="album">
+              <img id="lmrruAlbum" src="../media/albums/exoLMRRU.jpg" alt="loveMeRightRomanticUniverseAlbumCover">
+              <div id="lmrruexpand" class="expand">
+                  <p> Coming Soon  </p>
+                <!--
+                  <div id="lmrru" class="song"> Love Me Right Romantic Universe</div>
+                  <div id="dt" class="song"> Drop That</div>
+                  <div id="lmrrulv" class="song"> Love Me Right Romantic Universe - Less Vocal</div>
+                  <div id="dtlv" class="song"> Drop That - Less Vocal</div>
+                -->
+              </div>
+            </div>
+            <div><h2>Coming Over</h2></div>
+            <div id="coming" class="album">
+              <img id="comingAlbum" src="../media/albums/exoComingOver.jpg" alt="comingOverAlbumCover">
+              <div id="coexpand" class="expand">
+                  <p> Coming Soon  </p>
+                <!--
+                  <div id="co" class="song"> 1. Coming Over</div>
+                  <div id="tac" class="song"> 2. TACTIX</div>
+                  <div id="rt" class="song"> 3. Run This</div>
+                  <div id="colv" class="song"> 4. Coming Over - Less Vocal</div>
+                  <div id="taclv" class="song"> 5. TACTIX - Less Vocal</div>
+                  <div id="rtlv" class="song"> 6. Run This - Less Vocal</div>
+                -->
+              </div>
+            </div>
+            <div><h2>COUNTDOWN</h2></div>
+            <div id="countdown" class=album>
+              <img id=cAlbum src=../media/albums/exoCountdown.jpg alt=countdownAlbumCover>
+              <div id=cexpand class=expand>
+                <p> Coming Soon  </p>
+              </div>
+            </div>
         </div>
     </div>
     <div id="player">
