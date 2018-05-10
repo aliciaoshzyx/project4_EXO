@@ -132,7 +132,7 @@ h4{
     }
 
     
-    #exodus img, #theWar img, #mama img, #xoxo img, #growl img, #midA img, #overdose img, #lmrA img, #lmrruA img, #sfyA img, #exact img, #lotto img, #coming img, #forlife img, #power img{
+    #exodus img, #theWar img, #mama img, #xoxo img, #growl img, #midA img, #overdose img, #lmrA img, #lmrruA img, #sfyA img, #exact img, #lotto img, #coming img, #forlife img, #power img, #exodusC img, #theWarC img, #mamaC img, #xoxoC img, #growlC img, #midCA img, #overdoseC img, #lmrCA img,  #sfyCA img, #exactC img, #lottoC img, #forlifeC img, #powerC img, #universe img, #countdown img{
         height: 43vw;
         max-height:100vw;
         flex: 0 0 50%;
@@ -148,12 +148,12 @@ h4{
         margin-bottom: 20px;
     }
 
-    #exodus, #theWar, #mama, #xoxo, #growl, #midA, #overdose, #lmrA, #lmrruA, #sfyA, #exact, #lotto, #coming, #forlife, #power {
+    #exodus, #theWar, #mama, #xoxo, #growl, #midA, #overdose, #lmrA, #lmrruA, #sfyA, #exact, #lotto, #coming, #forlife, #power , #exodusC, #theWarC, #mamaC, #xoxoC, #growlC, #midCA, #overdoseC, #lmrCA,  #sfyCA, #exactC, #lottoC, #forlifeC, #powerC, #universe, #countdown{
         max-height:60vw;
         font-size: 0.5em;
     }
 
-    #exodus img, #theWar img, #mama img, #xoxo img, #growl img, #midA img, #overdose img, #lmrA img, #lmrruA img, #sfyA img, #exact img, #lotto img, #coming img, #forlife img, #power img{
+    #exodus img, #theWar img, #mama img, #xoxo img, #growl img, #midA img, #overdose img, #lmrA img, #lmrruA img, #sfyA img, #exact img, #lotto img, #coming img, #forlife img, #power img, #exodusC img, #theWarC img, #mamaC img, #xoxoC img, #growlC img, #midCA img, #overdoseC img, #lmrCA img,  #sfyCA img, #exactC img, #lottoC img, #forlifeC img, #powerC img, #universe img, #countdown img{
         height: 150px;
         max-height:100vw;
         flex: 0 0 50%;
